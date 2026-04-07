@@ -1,0 +1,2473 @@
+[2026-04-06 03:01:52.748 +0530] [32mINFO[39m: [36mMongoDB connected[39m
+    service: "aegisplane-backend"
+[2026-04-06 03:01:53.176 +0530] [32mINFO[39m: [36mAegisPlane backend listening on port 4000[39m
+    service: "aegisplane-backend"
+[2026-04-06 03:03:44.254 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 1,
+      "method": "GET",
+      "url": "/api/v1/health",
+      "query": {},
+      "params": {},
+      "headers": {
+        "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.8115",
+        "host": "localhost:4000",
+        "connection": "Keep-Alive"
+      },
+      "remoteAddress": "::1",
+      "remotePort": 54708
+    }
+    res: {
+      "statusCode": 200,
+      "headers": {
+        "x-request-id": "5P0LgEFV2YZf",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "600;w=60",
+        "ratelimit-limit": "600",
+        "ratelimit-remaining": "599",
+        "ratelimit-reset": "60",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "99",
+        "etag": "W/\"63-SKr26obnqCWIyq6s8rAzj3anmPw\""
+      }
+    }
+    responseTime: 5
+[2026-04-06 03:03:44.317 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 2,
+      "method": "GET",
+      "url": "/api/v1/health",
+      "query": {},
+      "params": {},
+      "headers": {
+        "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.8115",
+        "host": "localhost:4000",
+        "connection": "close"
+      },
+      "remoteAddress": "::1",
+      "remotePort": 54710
+    }
+    res: {
+      "statusCode": 200,
+      "headers": {
+        "x-request-id": "Y3x6e31tJjSK",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "600;w=60",
+        "ratelimit-limit": "600",
+        "ratelimit-remaining": "598",
+        "ratelimit-reset": "60",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "99",
+        "etag": "W/\"63-ofAf+xJ+indB5tco3FqUfA4eSTg\""
+      }
+    }
+    responseTime: 1
+[2026-04-06 03:04:56.995 +0530] [31mERROR[39m: [36mRefresh token is required[39m
+    service: "aegisplane-backend"
+    requestId: "25hGfz_uTLqx"
+    code: "REFRESH_TOKEN_REQUIRED"
+    statusCode: 400
+    err: {
+      "type": "ApiError",
+      "message": "Refresh token is required",
+      "stack":
+          Error: Refresh token is required
+              at AuthService.refresh (file:///D:/WEB%20PRO/AGIi/apps/backend/dist/services/auth.service.js:96:19)
+              at file:///D:/WEB%20PRO/AGIi/apps/backend/dist/controllers/auth/auth.controller.js:15:38
+              at file:///D:/WEB%20PRO/AGIi/apps/backend/dist/shared/utils/async-handler.js:2:21
+              at Layer.handle [as handle_request] (D:\WEB PRO\AGIi\node_modules\express\lib\router\layer.js:95:5)
+              at next (D:\WEB PRO\AGIi\node_modules\express\lib\router\route.js:149:13)
+              at file:///D:/WEB%20PRO/AGIi/apps/backend/dist/middleware/validate.js:13:5
+              at Layer.handle [as handle_request] (D:\WEB PRO\AGIi\node_modules\express\lib\router\layer.js:95:5)
+              at next (D:\WEB PRO\AGIi\node_modules\express\lib\router\route.js:149:13)
+              at file:///D:/WEB%20PRO/AGIi/node_modules/express-rate-limit/dist/index.mjs:779:7
+              at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      "statusCode": 400,
+      "code": "REFRESH_TOKEN_REQUIRED"
+    }
+[2026-04-06 03:04:56.996 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 3,
+      "method": "POST",
+      "url": "/api/v1/auth/refresh",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "localhost:4000",
+        "connection": "close",
+        "content-length": "2",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+        "content-type": "application/json",
+        "sec-ch-ua-mobile": "?0",
+        "accept": "*/*",
+        "origin": "http://localhost:5173",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-dest": "empty",
+        "referer": "http://localhost:5173/",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9"
+      },
+      "remoteAddress": "::1",
+      "remotePort": 57676
+    }
+    res: {
+      "statusCode": 400,
+      "headers": {
+        "x-request-id": "25hGfz_uTLqx",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "25;w=900",
+        "ratelimit-limit": "25",
+        "ratelimit-remaining": "24",
+        "ratelimit-reset": "900",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "124",
+        "etag": "W/\"7c-oVu2bmtLD/z074oUHQ8Jmt29PWQ\""
+      }
+    }
+    responseTime: 28
+[2026-04-06 03:04:56.998 +0530] [31mERROR[39m: [36mRefresh token is required[39m
+    service: "aegisplane-backend"
+    requestId: "6KOCZ27lDkPY"
+    code: "REFRESH_TOKEN_REQUIRED"
+    statusCode: 400
+    err: {
+      "type": "ApiError",
+      "message": "Refresh token is required",
+      "stack":
+          Error: Refresh token is required
+              at AuthService.refresh (file:///D:/WEB%20PRO/AGIi/apps/backend/dist/services/auth.service.js:96:19)
+              at file:///D:/WEB%20PRO/AGIi/apps/backend/dist/controllers/auth/auth.controller.js:15:38
+              at file:///D:/WEB%20PRO/AGIi/apps/backend/dist/shared/utils/async-handler.js:2:21
+              at Layer.handle [as handle_request] (D:\WEB PRO\AGIi\node_modules\express\lib\router\layer.js:95:5)
+              at next (D:\WEB PRO\AGIi\node_modules\express\lib\router\route.js:149:13)
+              at file:///D:/WEB%20PRO/AGIi/apps/backend/dist/middleware/validate.js:13:5
+              at Layer.handle [as handle_request] (D:\WEB PRO\AGIi\node_modules\express\lib\router\layer.js:95:5)
+              at next (D:\WEB PRO\AGIi\node_modules\express\lib\router\route.js:149:13)
+              at file:///D:/WEB%20PRO/AGIi/node_modules/express-rate-limit/dist/index.mjs:779:7
+              at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      "statusCode": 400,
+      "code": "REFRESH_TOKEN_REQUIRED"
+    }
+[2026-04-06 03:04:56.998 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 4,
+      "method": "POST",
+      "url": "/api/v1/auth/refresh",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "localhost:4000",
+        "connection": "close",
+        "content-length": "2",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+        "content-type": "application/json",
+        "sec-ch-ua-mobile": "?0",
+        "accept": "*/*",
+        "origin": "http://localhost:5173",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-dest": "empty",
+        "referer": "http://localhost:5173/",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9"
+      },
+      "remoteAddress": "::1",
+      "remotePort": 57677
+    }
+    res: {
+      "statusCode": 400,
+      "headers": {
+        "x-request-id": "6KOCZ27lDkPY",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "25;w=900",
+        "ratelimit-limit": "25",
+        "ratelimit-remaining": "23",
+        "ratelimit-reset": "900",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "124",
+        "etag": "W/\"7c-02DEXyDsIv/SNWrgWQmmBq+BDdU\""
+      }
+    }
+    responseTime: 2
+[2026-04-06 03:05:02.099 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 5,
+      "method": "POST",
+      "url": "/api/v1/auth/login",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "localhost:4000",
+        "connection": "close",
+        "content-length": "61",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+        "content-type": "application/json",
+        "sec-ch-ua-mobile": "?0",
+        "accept": "*/*",
+        "origin": "http://localhost:5173",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-dest": "empty",
+        "referer": "http://localhost:5173/login",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9"
+      },
+      "remoteAddress": "::1",
+      "remotePort": 57678
+    }
+    res: {
+      "statusCode": 200,
+      "headers": {
+        "x-request-id": "vIDiU0pYi9hY",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "25;w=900",
+        "ratelimit-limit": "25",
+        "ratelimit-remaining": "22",
+        "ratelimit-reset": "896",
+        "set-cookie": "refreshToken=2419a008dda4987a7e45e333c2c9de32a4638a566a2cd59dfe8dbb289de8721aa0457f2dcdd4e082e5b2779dab1bde62; Domain=localhost; Path=/api/v1/auth/refresh; Expires=Tue, 05 May 2026 21:35:02 GMT; HttpOnly; Secure; SameSite=Strict",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "697",
+        "etag": "W/\"2b9-qdZQM+Rehnug4h9gIhMWlhVZf1I\""
+      }
+    }
+    responseTime: 520
+[2026-04-06 03:05:02.727 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 7,
+      "method": "GET",
+      "url": "/api/v1/features",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "localhost:4000",
+        "connection": "close",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyZDQ1OWYzYjU1OGVlM2Y2YTRkZjEiLCJzZXNzaW9uSWQiOiJqNlVxQUltcGVzdE9rOTByTjIiLCJyb2xlSWRzIjpbIjY5ZDJkNDU5ZjNiNTU4ZWUzZjZhNGRlMiJdLCJwZXJtaXNzaW9ucyI6WyIqIl0sImlzUGxhdGZvcm1BZG1pbiI6dHJ1ZSwiZW1haWwiOiJhZG1pbkBhZWdpc3BsYW5lLmRldiIsImlhdCI6MTc3NTQyNDkwMiwiZXhwIjoxNzc1NDI1ODAyfQ.KUxRQnJjb53-6KqQkiEG8_UWY48az5Eks-UpNd5tEtk",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+        "sec-ch-ua-mobile": "?0",
+        "accept": "*/*",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-dest": "empty",
+        "referer": "http://localhost:5173/dashboard",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9"
+      },
+      "remoteAddress": "::1",
+      "remotePort": 50961
+    }
+    res: {
+      "statusCode": 200,
+      "headers": {
+        "x-request-id": "HUMBDkH9Hc58",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "600;w=60",
+        "ratelimit-limit": "600",
+        "ratelimit-remaining": "595",
+        "ratelimit-reset": "55",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "1220",
+        "etag": "W/\"4c4-2GNUNiTaDf4M9C+JiYDMC9LY8sA\""
+      }
+    }
+    responseTime: 9
+[2026-04-06 03:05:02.730 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 8,
+      "method": "GET",
+      "url": "/api/v1/tenants",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "localhost:4000",
+        "connection": "close",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyZDQ1OWYzYjU1OGVlM2Y2YTRkZjEiLCJzZXNzaW9uSWQiOiJqNlVxQUltcGVzdE9rOTByTjIiLCJyb2xlSWRzIjpbIjY5ZDJkNDU5ZjNiNTU4ZWUzZjZhNGRlMiJdLCJwZXJtaXNzaW9ucyI6WyIqIl0sImlzUGxhdGZvcm1BZG1pbiI6dHJ1ZSwiZW1haWwiOiJhZG1pbkBhZWdpc3BsYW5lLmRldiIsImlhdCI6MTc3NTQyNDkwMiwiZXhwIjoxNzc1NDI1ODAyfQ.KUxRQnJjb53-6KqQkiEG8_UWY48az5Eks-UpNd5tEtk",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+        "sec-ch-ua-mobile": "?0",
+        "accept": "*/*",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-dest": "empty",
+        "referer": "http://localhost:5173/dashboard",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9",
+        "if-none-match": "W/\"264-F6US6byj5TmPkhLCdUaeAJeROLk\""
+      },
+      "remoteAddress": "::1",
+      "remotePort": 50962
+    }
+    res: {
+      "statusCode": 200,
+      "headers": {
+        "x-request-id": "7GUGuL0WvF_R",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "600;w=60",
+        "ratelimit-limit": "600",
+        "ratelimit-remaining": "594",
+        "ratelimit-reset": "55",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "370",
+        "etag": "W/\"172-jaqJBcG59SxhOiEpIC32fIwNXyM\""
+      }
+    }
+    responseTime: 9
+[2026-04-06 03:05:02.732 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 6,
+      "method": "GET",
+      "url": "/api/v1/dashboard",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "localhost:4000",
+        "connection": "close",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyZDQ1OWYzYjU1OGVlM2Y2YTRkZjEiLCJzZXNzaW9uSWQiOiJqNlVxQUltcGVzdE9rOTByTjIiLCJyb2xlSWRzIjpbIjY5ZDJkNDU5ZjNiNTU4ZWUzZjZhNGRlMiJdLCJwZXJtaXNzaW9ucyI6WyIqIl0sImlzUGxhdGZvcm1BZG1pbiI6dHJ1ZSwiZW1haWwiOiJhZG1pbkBhZWdpc3BsYW5lLmRldiIsImlhdCI6MTc3NTQyNDkwMiwiZXhwIjoxNzc1NDI1ODAyfQ.KUxRQnJjb53-6KqQkiEG8_UWY48az5Eks-UpNd5tEtk",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+        "sec-ch-ua-mobile": "?0",
+        "accept": "*/*",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-dest": "empty",
+        "referer": "http://localhost:5173/dashboard",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9"
+      },
+      "remoteAddress": "::1",
+      "remotePort": 50960
+    }
+    res: {
+      "statusCode": 200,
+      "headers": {
+        "x-request-id": "qbWoEOG1SR-o",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "600;w=60",
+        "ratelimit-limit": "600",
+        "ratelimit-remaining": "596",
+        "ratelimit-reset": "55",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "1306",
+        "etag": "W/\"51a-z0XyO2AQLH1TlH3UYwDjsK/8xnM\""
+      }
+    }
+    responseTime: 20
+[2026-04-06 03:05:28.691 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 10,
+      "method": "GET",
+      "url": "/api/v1/tenants",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "localhost:4000",
+        "connection": "close",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyZDQ1OWYzYjU1OGVlM2Y2YTRkZjEiLCJzZXNzaW9uSWQiOiJqNlVxQUltcGVzdE9rOTByTjIiLCJyb2xlSWRzIjpbIjY5ZDJkNDU5ZjNiNTU4ZWUzZjZhNGRlMiJdLCJwZXJtaXNzaW9ucyI6WyIqIl0sImlzUGxhdGZvcm1BZG1pbiI6dHJ1ZSwiZW1haWwiOiJhZG1pbkBhZWdpc3BsYW5lLmRldiIsImlhdCI6MTc3NTQyNDkwMiwiZXhwIjoxNzc1NDI1ODAyfQ.KUxRQnJjb53-6KqQkiEG8_UWY48az5Eks-UpNd5tEtk",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+        "sec-ch-ua-mobile": "?0",
+        "accept": "*/*",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-dest": "empty",
+        "referer": "http://localhost:5173/audit-logs",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9",
+        "if-none-match": "W/\"172-jaqJBcG59SxhOiEpIC32fIwNXyM\""
+      },
+      "remoteAddress": "::1",
+      "remotePort": 53955
+    }
+    res: {
+      "statusCode": 304,
+      "headers": {
+        "x-request-id": "-ACtrKpO7BET",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "600;w=60",
+        "ratelimit-limit": "600",
+        "ratelimit-remaining": "592",
+        "ratelimit-reset": "29",
+        "etag": "W/\"172-jaqJBcG59SxhOiEpIC32fIwNXyM\""
+      }
+    }
+    responseTime: 11
+[2026-04-06 03:05:28.696 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 9,
+      "method": "GET",
+      "url": "/api/v1/audit-logs",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "localhost:4000",
+        "connection": "close",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyZDQ1OWYzYjU1OGVlM2Y2YTRkZjEiLCJzZXNzaW9uSWQiOiJqNlVxQUltcGVzdE9rOTByTjIiLCJyb2xlSWRzIjpbIjY5ZDJkNDU5ZjNiNTU4ZWUzZjZhNGRlMiJdLCJwZXJtaXNzaW9ucyI6WyIqIl0sImlzUGxhdGZvcm1BZG1pbiI6dHJ1ZSwiZW1haWwiOiJhZG1pbkBhZWdpc3BsYW5lLmRldiIsImlhdCI6MTc3NTQyNDkwMiwiZXhwIjoxNzc1NDI1ODAyfQ.KUxRQnJjb53-6KqQkiEG8_UWY48az5Eks-UpNd5tEtk",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+        "x-tenant-id": "69d2d459f3b558ee3f6a4dfb",
+        "sec-ch-ua-mobile": "?0",
+        "accept": "*/*",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-dest": "empty",
+        "referer": "http://localhost:5173/audit-logs",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9"
+      },
+      "remoteAddress": "::1",
+      "remotePort": 53954
+    }
+    res: {
+      "statusCode": 200,
+      "headers": {
+        "x-request-id": "wq5itzzv-Los",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "600;w=60",
+        "ratelimit-limit": "600",
+        "ratelimit-remaining": "593",
+        "ratelimit-reset": "29",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "81",
+        "etag": "W/\"51-ReHyLniezKnNlop4sYb4hA6uNJs\""
+      }
+    }
+    responseTime: 19
+[2026-04-06 03:05:28.701 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 11,
+      "method": "GET",
+      "url": "/api/v1/users",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "localhost:4000",
+        "connection": "close",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyZDQ1OWYzYjU1OGVlM2Y2YTRkZjEiLCJzZXNzaW9uSWQiOiJqNlVxQUltcGVzdE9rOTByTjIiLCJyb2xlSWRzIjpbIjY5ZDJkNDU5ZjNiNTU4ZWUzZjZhNGRlMiJdLCJwZXJtaXNzaW9ucyI6WyIqIl0sImlzUGxhdGZvcm1BZG1pbiI6dHJ1ZSwiZW1haWwiOiJhZG1pbkBhZWdpc3BsYW5lLmRldiIsImlhdCI6MTc3NTQyNDkwMiwiZXhwIjoxNzc1NDI1ODAyfQ.KUxRQnJjb53-6KqQkiEG8_UWY48az5Eks-UpNd5tEtk",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+        "x-tenant-id": "69d2d459f3b558ee3f6a4dfb",
+        "sec-ch-ua-mobile": "?0",
+        "accept": "*/*",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-dest": "empty",
+        "referer": "http://localhost:5173/audit-logs",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9"
+      },
+      "remoteAddress": "::1",
+      "remotePort": 53956
+    }
+    res: {
+      "statusCode": 200,
+      "headers": {
+        "x-request-id": "52sUQbMeYlNC",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "600;w=60",
+        "ratelimit-limit": "600",
+        "ratelimit-remaining": "591",
+        "ratelimit-reset": "29",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "1558",
+        "etag": "W/\"616-Rt73fBrA0vbdU8glNF6Yb3z12+A\""
+      }
+    }
+    responseTime: 17
+[2026-04-06 03:05:31.805 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 12,
+      "method": "GET",
+      "url": "/api/v1/subscriptions/plans",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "localhost:4000",
+        "connection": "close",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyZDQ1OWYzYjU1OGVlM2Y2YTRkZjEiLCJzZXNzaW9uSWQiOiJqNlVxQUltcGVzdE9rOTByTjIiLCJyb2xlSWRzIjpbIjY5ZDJkNDU5ZjNiNTU4ZWUzZjZhNGRlMiJdLCJwZXJtaXNzaW9ucyI6WyIqIl0sImlzUGxhdGZvcm1BZG1pbiI6dHJ1ZSwiZW1haWwiOiJhZG1pbkBhZWdpc3BsYW5lLmRldiIsImlhdCI6MTc3NTQyNDkwMiwiZXhwIjoxNzc1NDI1ODAyfQ.KUxRQnJjb53-6KqQkiEG8_UWY48az5Eks-UpNd5tEtk",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+        "sec-ch-ua-mobile": "?0",
+        "accept": "*/*",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-dest": "empty",
+        "referer": "http://localhost:5173/billing",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9"
+      },
+      "remoteAddress": "::1",
+      "remotePort": 59560
+    }
+    res: {
+      "statusCode": 200,
+      "headers": {
+        "x-request-id": "-g05PJC68-x5",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "600;w=60",
+        "ratelimit-limit": "600",
+        "ratelimit-remaining": "590",
+        "ratelimit-reset": "26",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "470",
+        "etag": "W/\"1d6-H2GOBoDLeNQVjvOSPPhpZc6GrHA\""
+      }
+    }
+    responseTime: 3
+[2026-04-06 03:05:31.817 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 14,
+      "method": "GET",
+      "url": "/api/v1/tenants",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "localhost:4000",
+        "connection": "close",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyZDQ1OWYzYjU1OGVlM2Y2YTRkZjEiLCJzZXNzaW9uSWQiOiJqNlVxQUltcGVzdE9rOTByTjIiLCJyb2xlSWRzIjpbIjY5ZDJkNDU5ZjNiNTU4ZWUzZjZhNGRlMiJdLCJwZXJtaXNzaW9ucyI6WyIqIl0sImlzUGxhdGZvcm1BZG1pbiI6dHJ1ZSwiZW1haWwiOiJhZG1pbkBhZWdpc3BsYW5lLmRldiIsImlhdCI6MTc3NTQyNDkwMiwiZXhwIjoxNzc1NDI1ODAyfQ.KUxRQnJjb53-6KqQkiEG8_UWY48az5Eks-UpNd5tEtk",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+        "sec-ch-ua-mobile": "?0",
+        "accept": "*/*",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-dest": "empty",
+        "referer": "http://localhost:5173/billing",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9",
+        "if-none-match": "W/\"172-jaqJBcG59SxhOiEpIC32fIwNXyM\""
+      },
+      "remoteAddress": "::1",
+      "remotePort": 58130
+    }
+    res: {
+      "statusCode": 304,
+      "headers": {
+        "x-request-id": "zwaZKNCDqTl-",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "600;w=60",
+        "ratelimit-limit": "600",
+        "ratelimit-remaining": "588",
+        "ratelimit-reset": "26",
+        "etag": "W/\"172-jaqJBcG59SxhOiEpIC32fIwNXyM\""
+      }
+    }
+    responseTime: 7
+[2026-04-06 03:05:31.818 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 13,
+      "method": "GET",
+      "url": "/api/v1/subscriptions/tenant/69d2d459f3b558ee3f6a4dfb",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "localhost:4000",
+        "connection": "close",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyZDQ1OWYzYjU1OGVlM2Y2YTRkZjEiLCJzZXNzaW9uSWQiOiJqNlVxQUltcGVzdE9rOTByTjIiLCJyb2xlSWRzIjpbIjY5ZDJkNDU5ZjNiNTU4ZWUzZjZhNGRlMiJdLCJwZXJtaXNzaW9ucyI6WyIqIl0sImlzUGxhdGZvcm1BZG1pbiI6dHJ1ZSwiZW1haWwiOiJhZG1pbkBhZWdpc3BsYW5lLmRldiIsImlhdCI6MTc3NTQyNDkwMiwiZXhwIjoxNzc1NDI1ODAyfQ.KUxRQnJjb53-6KqQkiEG8_UWY48az5Eks-UpNd5tEtk",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+        "x-tenant-id": "69d2d459f3b558ee3f6a4dfb",
+        "sec-ch-ua-mobile": "?0",
+        "accept": "*/*",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-dest": "empty",
+        "referer": "http://localhost:5173/billing",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9"
+      },
+      "remoteAddress": "::1",
+      "remotePort": 58129
+    }
+    res: {
+      "statusCode": 200,
+      "headers": {
+        "x-request-id": "KgYX53igeYmv",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "600;w=60",
+        "ratelimit-limit": "600",
+        "ratelimit-remaining": "589",
+        "ratelimit-reset": "26",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "523",
+        "etag": "W/\"20b-fs7e7FG/zsqvNVNbr33BhTC4xrA\""
+      }
+    }
+    responseTime: 12
+[2026-04-06 03:05:38.740 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 15,
+      "method": "PATCH",
+      "url": "/api/v1/tenants/69d2d459f3b558ee3f6a4dfb/plan",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "localhost:4000",
+        "connection": "close",
+        "content-length": "15",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyZDQ1OWYzYjU1OGVlM2Y2YTRkZjEiLCJzZXNzaW9uSWQiOiJqNlVxQUltcGVzdE9rOTByTjIiLCJyb2xlSWRzIjpbIjY5ZDJkNDU5ZjNiNTU4ZWUzZjZhNGRlMiJdLCJwZXJtaXNzaW9ucyI6WyIqIl0sImlzUGxhdGZvcm1BZG1pbiI6dHJ1ZSwiZW1haWwiOiJhZG1pbkBhZWdpc3BsYW5lLmRldiIsImlhdCI6MTc3NTQyNDkwMiwiZXhwIjoxNzc1NDI1ODAyfQ.KUxRQnJjb53-6KqQkiEG8_UWY48az5Eks-UpNd5tEtk",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+        "content-type": "application/json",
+        "sec-ch-ua-mobile": "?0",
+        "accept": "*/*",
+        "origin": "http://localhost:5173",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-dest": "empty",
+        "referer": "http://localhost:5173/billing",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9"
+      },
+      "remoteAddress": "::1",
+      "remotePort": 57237
+    }
+    res: {
+      "statusCode": 200,
+      "headers": {
+        "x-request-id": "5qKbhfwoovz1",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "600;w=60",
+        "ratelimit-limit": "600",
+        "ratelimit-remaining": "587",
+        "ratelimit-reset": "19",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "307",
+        "etag": "W/\"133-oWrcMr++4qCdmXvVnfMvdCYwSkE\""
+      }
+    }
+    responseTime: 22
+[2026-04-06 03:05:38.759 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 16,
+      "method": "GET",
+      "url": "/api/v1/tenants",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "localhost:4000",
+        "connection": "close",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyZDQ1OWYzYjU1OGVlM2Y2YTRkZjEiLCJzZXNzaW9uSWQiOiJqNlVxQUltcGVzdE9rOTByTjIiLCJyb2xlSWRzIjpbIjY5ZDJkNDU5ZjNiNTU4ZWUzZjZhNGRlMiJdLCJwZXJtaXNzaW9ucyI6WyIqIl0sImlzUGxhdGZvcm1BZG1pbiI6dHJ1ZSwiZW1haWwiOiJhZG1pbkBhZWdpc3BsYW5lLmRldiIsImlhdCI6MTc3NTQyNDkwMiwiZXhwIjoxNzc1NDI1ODAyfQ.KUxRQnJjb53-6KqQkiEG8_UWY48az5Eks-UpNd5tEtk",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+        "sec-ch-ua-mobile": "?0",
+        "accept": "*/*",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-dest": "empty",
+        "referer": "http://localhost:5173/billing",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9",
+        "if-none-match": "W/\"172-jaqJBcG59SxhOiEpIC32fIwNXyM\""
+      },
+      "remoteAddress": "::1",
+      "remotePort": 60088
+    }
+    res: {
+      "statusCode": 200,
+      "headers": {
+        "x-request-id": "frQ4gN8MJpMd",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "600;w=60",
+        "ratelimit-limit": "600",
+        "ratelimit-remaining": "586",
+        "ratelimit-reset": "19",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "364",
+        "etag": "W/\"16c-MsCWuYPVf+QDjQmbV2928hqbJf8\""
+      }
+    }
+    responseTime: 9
+[2026-04-06 03:05:38.763 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 17,
+      "method": "GET",
+      "url": "/api/v1/subscriptions/tenant/69d2d459f3b558ee3f6a4dfb",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "localhost:4000",
+        "connection": "close",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyZDQ1OWYzYjU1OGVlM2Y2YTRkZjEiLCJzZXNzaW9uSWQiOiJqNlVxQUltcGVzdE9rOTByTjIiLCJyb2xlSWRzIjpbIjY5ZDJkNDU5ZjNiNTU4ZWUzZjZhNGRlMiJdLCJwZXJtaXNzaW9ucyI6WyIqIl0sImlzUGxhdGZvcm1BZG1pbiI6dHJ1ZSwiZW1haWwiOiJhZG1pbkBhZWdpc3BsYW5lLmRldiIsImlhdCI6MTc3NTQyNDkwMiwiZXhwIjoxNzc1NDI1ODAyfQ.KUxRQnJjb53-6KqQkiEG8_UWY48az5Eks-UpNd5tEtk",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+        "x-tenant-id": "69d2d459f3b558ee3f6a4dfb",
+        "sec-ch-ua-mobile": "?0",
+        "accept": "*/*",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-dest": "empty",
+        "referer": "http://localhost:5173/billing",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9",
+        "if-none-match": "W/\"20b-fs7e7FG/zsqvNVNbr33BhTC4xrA\""
+      },
+      "remoteAddress": "::1",
+      "remotePort": 60089
+    }
+    res: {
+      "statusCode": 200,
+      "headers": {
+        "x-request-id": "cspBJyegVOP2",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "600;w=60",
+        "ratelimit-limit": "600",
+        "ratelimit-remaining": "585",
+        "ratelimit-reset": "19",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "459",
+        "etag": "W/\"1cb-cfm88XQBiFtquD3mMKyNk2YX+d0\""
+      }
+    }
+    responseTime: 8
+[2026-04-06 03:05:41.872 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 18,
+      "method": "PATCH",
+      "url": "/api/v1/tenants/69d2d459f3b558ee3f6a4dfb/plan",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "localhost:4000",
+        "connection": "close",
+        "content-length": "14",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyZDQ1OWYzYjU1OGVlM2Y2YTRkZjEiLCJzZXNzaW9uSWQiOiJqNlVxQUltcGVzdE9rOTByTjIiLCJyb2xlSWRzIjpbIjY5ZDJkNDU5ZjNiNTU4ZWUzZjZhNGRlMiJdLCJwZXJtaXNzaW9ucyI6WyIqIl0sImlzUGxhdGZvcm1BZG1pbiI6dHJ1ZSwiZW1haWwiOiJhZG1pbkBhZWdpc3BsYW5lLmRldiIsImlhdCI6MTc3NTQyNDkwMiwiZXhwIjoxNzc1NDI1ODAyfQ.KUxRQnJjb53-6KqQkiEG8_UWY48az5Eks-UpNd5tEtk",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+        "content-type": "application/json",
+        "sec-ch-ua-mobile": "?0",
+        "accept": "*/*",
+        "origin": "http://localhost:5173",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-dest": "empty",
+        "referer": "http://localhost:5173/billing",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9"
+      },
+      "remoteAddress": "::1",
+      "remotePort": 56990
+    }
+    res: {
+      "statusCode": 200,
+      "headers": {
+        "x-request-id": "m-sgQS3Nm8GU",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "600;w=60",
+        "ratelimit-limit": "600",
+        "ratelimit-remaining": "584",
+        "ratelimit-reset": "16",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "306",
+        "etag": "W/\"132-wzK2gTVakCIlBSulaOrAoPwBOKA\""
+      }
+    }
+    responseTime: 14
+[2026-04-06 03:05:41.891 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 19,
+      "method": "GET",
+      "url": "/api/v1/tenants",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "localhost:4000",
+        "connection": "close",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyZDQ1OWYzYjU1OGVlM2Y2YTRkZjEiLCJzZXNzaW9uSWQiOiJqNlVxQUltcGVzdE9rOTByTjIiLCJyb2xlSWRzIjpbIjY5ZDJkNDU5ZjNiNTU4ZWUzZjZhNGRlMiJdLCJwZXJtaXNzaW9ucyI6WyIqIl0sImlzUGxhdGZvcm1BZG1pbiI6dHJ1ZSwiZW1haWwiOiJhZG1pbkBhZWdpc3BsYW5lLmRldiIsImlhdCI6MTc3NTQyNDkwMiwiZXhwIjoxNzc1NDI1ODAyfQ.KUxRQnJjb53-6KqQkiEG8_UWY48az5Eks-UpNd5tEtk",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+        "sec-ch-ua-mobile": "?0",
+        "accept": "*/*",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-dest": "empty",
+        "referer": "http://localhost:5173/billing",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9",
+        "if-none-match": "W/\"16c-MsCWuYPVf+QDjQmbV2928hqbJf8\""
+      },
+      "remoteAddress": "::1",
+      "remotePort": 54334
+    }
+    res: {
+      "statusCode": 200,
+      "headers": {
+        "x-request-id": "JTEtOAJ1G313",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "600;w=60",
+        "ratelimit-limit": "600",
+        "ratelimit-remaining": "583",
+        "ratelimit-reset": "16",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "363",
+        "etag": "W/\"16b-4O6w9QKoeLAbAm89eess1RTf3Hg\""
+      }
+    }
+    responseTime: 11
+[2026-04-06 03:05:41.898 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 20,
+      "method": "GET",
+      "url": "/api/v1/subscriptions/tenant/69d2d459f3b558ee3f6a4dfb",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "localhost:4000",
+        "connection": "close",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyZDQ1OWYzYjU1OGVlM2Y2YTRkZjEiLCJzZXNzaW9uSWQiOiJqNlVxQUltcGVzdE9rOTByTjIiLCJyb2xlSWRzIjpbIjY5ZDJkNDU5ZjNiNTU4ZWUzZjZhNGRlMiJdLCJwZXJtaXNzaW9ucyI6WyIqIl0sImlzUGxhdGZvcm1BZG1pbiI6dHJ1ZSwiZW1haWwiOiJhZG1pbkBhZWdpc3BsYW5lLmRldiIsImlhdCI6MTc3NTQyNDkwMiwiZXhwIjoxNzc1NDI1ODAyfQ.KUxRQnJjb53-6KqQkiEG8_UWY48az5Eks-UpNd5tEtk",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+        "x-tenant-id": "69d2d459f3b558ee3f6a4dfb",
+        "sec-ch-ua-mobile": "?0",
+        "accept": "*/*",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-dest": "empty",
+        "referer": "http://localhost:5173/billing",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9",
+        "if-none-match": "W/\"1cb-cfm88XQBiFtquD3mMKyNk2YX+d0\""
+      },
+      "remoteAddress": "::1",
+      "remotePort": 54335
+    }
+    res: {
+      "statusCode": 200,
+      "headers": {
+        "x-request-id": "PUkPdz1TZ-lb",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "600;w=60",
+        "ratelimit-limit": "600",
+        "ratelimit-remaining": "582",
+        "ratelimit-reset": "16",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "502",
+        "etag": "W/\"1f6-+qX3JAevW+Vubwj42yMt/CGTCT4\""
+      }
+    }
+    responseTime: 12
+[2026-04-06 03:05:48.666 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 21,
+      "method": "PATCH",
+      "url": "/api/v1/tenants/69d2d459f3b558ee3f6a4dfb/plan",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "localhost:4000",
+        "connection": "close",
+        "content-length": "21",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyZDQ1OWYzYjU1OGVlM2Y2YTRkZjEiLCJzZXNzaW9uSWQiOiJqNlVxQUltcGVzdE9rOTByTjIiLCJyb2xlSWRzIjpbIjY5ZDJkNDU5ZjNiNTU4ZWUzZjZhNGRlMiJdLCJwZXJtaXNzaW9ucyI6WyIqIl0sImlzUGxhdGZvcm1BZG1pbiI6dHJ1ZSwiZW1haWwiOiJhZG1pbkBhZWdpc3BsYW5lLmRldiIsImlhdCI6MTc3NTQyNDkwMiwiZXhwIjoxNzc1NDI1ODAyfQ.KUxRQnJjb53-6KqQkiEG8_UWY48az5Eks-UpNd5tEtk",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+        "content-type": "application/json",
+        "sec-ch-ua-mobile": "?0",
+        "accept": "*/*",
+        "origin": "http://localhost:5173",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-dest": "empty",
+        "referer": "http://localhost:5173/billing",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9"
+      },
+      "remoteAddress": "::1",
+      "remotePort": 59014
+    }
+    res: {
+      "statusCode": 200,
+      "headers": {
+        "x-request-id": "NtVetZ4HqzPH",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "600;w=60",
+        "ratelimit-limit": "600",
+        "ratelimit-remaining": "581",
+        "ratelimit-reset": "9",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "313",
+        "etag": "W/\"139-Tzs/lfY/AM1ywI0rM6pzkzEOVEs\""
+      }
+    }
+    responseTime: 8
+[2026-04-06 03:05:48.691 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 22,
+      "method": "GET",
+      "url": "/api/v1/tenants",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "localhost:4000",
+        "connection": "close",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyZDQ1OWYzYjU1OGVlM2Y2YTRkZjEiLCJzZXNzaW9uSWQiOiJqNlVxQUltcGVzdE9rOTByTjIiLCJyb2xlSWRzIjpbIjY5ZDJkNDU5ZjNiNTU4ZWUzZjZhNGRlMiJdLCJwZXJtaXNzaW9ucyI6WyIqIl0sImlzUGxhdGZvcm1BZG1pbiI6dHJ1ZSwiZW1haWwiOiJhZG1pbkBhZWdpc3BsYW5lLmRldiIsImlhdCI6MTc3NTQyNDkwMiwiZXhwIjoxNzc1NDI1ODAyfQ.KUxRQnJjb53-6KqQkiEG8_UWY48az5Eks-UpNd5tEtk",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+        "sec-ch-ua-mobile": "?0",
+        "accept": "*/*",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-dest": "empty",
+        "referer": "http://localhost:5173/billing",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9",
+        "if-none-match": "W/\"16b-4O6w9QKoeLAbAm89eess1RTf3Hg\""
+      },
+      "remoteAddress": "::1",
+      "remotePort": 49672
+    }
+    res: {
+      "statusCode": 200,
+      "headers": {
+        "x-request-id": "SC_FNwHSHUTs",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "600;w=60",
+        "ratelimit-limit": "600",
+        "ratelimit-remaining": "580",
+        "ratelimit-reset": "9",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "370",
+        "etag": "W/\"172-tDqestIBytPy3cYaTBJApF6o83E\""
+      }
+    }
+    responseTime: 13
+[2026-04-06 03:05:48.697 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 23,
+      "method": "GET",
+      "url": "/api/v1/subscriptions/tenant/69d2d459f3b558ee3f6a4dfb",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "localhost:4000",
+        "connection": "close",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyZDQ1OWYzYjU1OGVlM2Y2YTRkZjEiLCJzZXNzaW9uSWQiOiJqNlVxQUltcGVzdE9rOTByTjIiLCJyb2xlSWRzIjpbIjY5ZDJkNDU5ZjNiNTU4ZWUzZjZhNGRlMiJdLCJwZXJtaXNzaW9ucyI6WyIqIl0sImlzUGxhdGZvcm1BZG1pbiI6dHJ1ZSwiZW1haWwiOiJhZG1pbkBhZWdpc3BsYW5lLmRldiIsImlhdCI6MTc3NTQyNDkwMiwiZXhwIjoxNzc1NDI1ODAyfQ.KUxRQnJjb53-6KqQkiEG8_UWY48az5Eks-UpNd5tEtk",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+        "x-tenant-id": "69d2d459f3b558ee3f6a4dfb",
+        "sec-ch-ua-mobile": "?0",
+        "accept": "*/*",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-dest": "empty",
+        "referer": "http://localhost:5173/billing",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9",
+        "if-none-match": "W/\"1f6-+qX3JAevW+Vubwj42yMt/CGTCT4\""
+      },
+      "remoteAddress": "::1",
+      "remotePort": 49773
+    }
+    res: {
+      "statusCode": 200,
+      "headers": {
+        "x-request-id": "e7xqT9ToTips",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "600;w=60",
+        "ratelimit-limit": "600",
+        "ratelimit-remaining": "579",
+        "ratelimit-reset": "9",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "523",
+        "etag": "W/\"20b-hNwd0RH/5GZBH1i4GJfouEQEgBA\""
+      }
+    }
+    responseTime: 15
+[2026-04-06 03:05:54.566 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 24,
+      "method": "GET",
+      "url": "/api/v1/features",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "localhost:4000",
+        "connection": "close",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyZDQ1OWYzYjU1OGVlM2Y2YTRkZjEiLCJzZXNzaW9uSWQiOiJqNlVxQUltcGVzdE9rOTByTjIiLCJyb2xlSWRzIjpbIjY5ZDJkNDU5ZjNiNTU4ZWUzZjZhNGRlMiJdLCJwZXJtaXNzaW9ucyI6WyIqIl0sImlzUGxhdGZvcm1BZG1pbiI6dHJ1ZSwiZW1haWwiOiJhZG1pbkBhZWdpc3BsYW5lLmRldiIsImlhdCI6MTc3NTQyNDkwMiwiZXhwIjoxNzc1NDI1ODAyfQ.KUxRQnJjb53-6KqQkiEG8_UWY48az5Eks-UpNd5tEtk",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+        "sec-ch-ua-mobile": "?0",
+        "accept": "*/*",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-dest": "empty",
+        "referer": "http://localhost:5173/feature-flags",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9",
+        "if-none-match": "W/\"4c4-2GNUNiTaDf4M9C+JiYDMC9LY8sA\""
+      },
+      "remoteAddress": "::1",
+      "remotePort": 57097
+    }
+    res: {
+      "statusCode": 304,
+      "headers": {
+        "x-request-id": "45KY5mnFuW49",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "600;w=60",
+        "ratelimit-limit": "600",
+        "ratelimit-remaining": "578",
+        "ratelimit-reset": "3",
+        "etag": "W/\"4c4-2GNUNiTaDf4M9C+JiYDMC9LY8sA\""
+      }
+    }
+    responseTime: 5
+[2026-04-06 03:05:58.297 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 25,
+      "method": "GET",
+      "url": "/api/v1/roles",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "localhost:4000",
+        "connection": "close",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyZDQ1OWYzYjU1OGVlM2Y2YTRkZjEiLCJzZXNzaW9uSWQiOiJqNlVxQUltcGVzdE9rOTByTjIiLCJyb2xlSWRzIjpbIjY5ZDJkNDU5ZjNiNTU4ZWUzZjZhNGRlMiJdLCJwZXJtaXNzaW9ucyI6WyIqIl0sImlzUGxhdGZvcm1BZG1pbiI6dHJ1ZSwiZW1haWwiOiJhZG1pbkBhZWdpc3BsYW5lLmRldiIsImlhdCI6MTc3NTQyNDkwMiwiZXhwIjoxNzc1NDI1ODAyfQ.KUxRQnJjb53-6KqQkiEG8_UWY48az5Eks-UpNd5tEtk",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+        "x-tenant-id": "69d2d459f3b558ee3f6a4dfb",
+        "sec-ch-ua-mobile": "?0",
+        "accept": "*/*",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-dest": "empty",
+        "referer": "http://localhost:5173/roles",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9",
+        "if-none-match": "W/\"264-F6US6byj5TmPkhLCdUaeAJeROLk\""
+      },
+      "remoteAddress": "::1",
+      "remotePort": 60999
+    }
+    res: {
+      "statusCode": 200,
+      "headers": {
+        "x-request-id": "ITjUdBPg9tlS",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "600;w=60",
+        "ratelimit-limit": "600",
+        "ratelimit-remaining": "599",
+        "ratelimit-reset": "60",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "1410",
+        "etag": "W/\"582-xNtF8rU4umtPpLgRhVSpccaoouM\""
+      }
+    }
+    responseTime: 13
+[2026-04-06 03:06:03.491 +0530] [31mERROR[39m: [36mRole was not found in this tenant[39m
+    service: "aegisplane-backend"
+    requestId: "ZYQHAJiahZqP"
+    code: "ROLE_NOT_FOUND"
+    statusCode: 404
+    err: {
+      "type": "ApiError",
+      "message": "Role was not found in this tenant",
+      "stack":
+          Error: Role was not found in this tenant
+              at RoleService.update (file:///D:/WEB%20PRO/AGIi/apps/backend/dist/services/role.service.js:29:19)
+              at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+              at async file:///D:/WEB%20PRO/AGIi/apps/backend/dist/controllers/tenants/role.controller.js:13:22
+      "statusCode": 404,
+      "code": "ROLE_NOT_FOUND"
+    }
+[2026-04-06 03:06:03.492 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 26,
+      "method": "PATCH",
+      "url": "/api/v1/roles/69d2d459f3b558ee3f6a4de2",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "localhost:4000",
+        "connection": "close",
+        "content-length": "336",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyZDQ1OWYzYjU1OGVlM2Y2YTRkZjEiLCJzZXNzaW9uSWQiOiJqNlVxQUltcGVzdE9rOTByTjIiLCJyb2xlSWRzIjpbIjY5ZDJkNDU5ZjNiNTU4ZWUzZjZhNGRlMiJdLCJwZXJtaXNzaW9ucyI6WyIqIl0sImlzUGxhdGZvcm1BZG1pbiI6dHJ1ZSwiZW1haWwiOiJhZG1pbkBhZWdpc3BsYW5lLmRldiIsImlhdCI6MTc3NTQyNDkwMiwiZXhwIjoxNzc1NDI1ODAyfQ.KUxRQnJjb53-6KqQkiEG8_UWY48az5Eks-UpNd5tEtk",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+        "content-type": "application/json",
+        "x-tenant-id": "69d2d459f3b558ee3f6a4dfb",
+        "sec-ch-ua-mobile": "?0",
+        "accept": "*/*",
+        "origin": "http://localhost:5173",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-dest": "empty",
+        "referer": "http://localhost:5173/roles",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9"
+      },
+      "remoteAddress": "::1",
+      "remotePort": 61001
+    }
+    res: {
+      "statusCode": 404,
+      "headers": {
+        "x-request-id": "ZYQHAJiahZqP",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "600;w=60",
+        "ratelimit-limit": "600",
+        "ratelimit-remaining": "598",
+        "ratelimit-reset": "55",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "124",
+        "etag": "W/\"7c-GDPdmnt5kUC5/1JJHCphw4Kdta8\""
+      }
+    }
+    responseTime: 11
+[2026-04-06 03:06:04.520 +0530] [31mERROR[39m: [36mRole was not found in this tenant[39m
+    service: "aegisplane-backend"
+    requestId: "PuF9xzbnW4Ws"
+    code: "ROLE_NOT_FOUND"
+    statusCode: 404
+    err: {
+      "type": "ApiError",
+      "message": "Role was not found in this tenant",
+      "stack":
+          Error: Role was not found in this tenant
+              at RoleService.update (file:///D:/WEB%20PRO/AGIi/apps/backend/dist/services/role.service.js:29:19)
+              at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+              at async file:///D:/WEB%20PRO/AGIi/apps/backend/dist/controllers/tenants/role.controller.js:13:22
+      "statusCode": 404,
+      "code": "ROLE_NOT_FOUND"
+    }
+[2026-04-06 03:06:04.521 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 27,
+      "method": "PATCH",
+      "url": "/api/v1/roles/69d2d459f3b558ee3f6a4de2",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "localhost:4000",
+        "connection": "close",
+        "content-length": "336",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyZDQ1OWYzYjU1OGVlM2Y2YTRkZjEiLCJzZXNzaW9uSWQiOiJqNlVxQUltcGVzdE9rOTByTjIiLCJyb2xlSWRzIjpbIjY5ZDJkNDU5ZjNiNTU4ZWUzZjZhNGRlMiJdLCJwZXJtaXNzaW9ucyI6WyIqIl0sImlzUGxhdGZvcm1BZG1pbiI6dHJ1ZSwiZW1haWwiOiJhZG1pbkBhZWdpc3BsYW5lLmRldiIsImlhdCI6MTc3NTQyNDkwMiwiZXhwIjoxNzc1NDI1ODAyfQ.KUxRQnJjb53-6KqQkiEG8_UWY48az5Eks-UpNd5tEtk",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+        "content-type": "application/json",
+        "x-tenant-id": "69d2d459f3b558ee3f6a4dfb",
+        "sec-ch-ua-mobile": "?0",
+        "accept": "*/*",
+        "origin": "http://localhost:5173",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-dest": "empty",
+        "referer": "http://localhost:5173/roles",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9"
+      },
+      "remoteAddress": "::1",
+      "remotePort": 63931
+    }
+    res: {
+      "statusCode": 404,
+      "headers": {
+        "x-request-id": "PuF9xzbnW4Ws",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "600;w=60",
+        "ratelimit-limit": "600",
+        "ratelimit-remaining": "597",
+        "ratelimit-reset": "54",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "124",
+        "etag": "W/\"7c-MMrJTLnn5CyASfQhiOJI1XAtrKA\""
+      }
+    }
+    responseTime: 11
+[2026-04-06 03:06:05.084 +0530] [31mERROR[39m: [36mRole was not found in this tenant[39m
+    service: "aegisplane-backend"
+    requestId: "e92Ax8NrCvSj"
+    code: "ROLE_NOT_FOUND"
+    statusCode: 404
+    err: {
+      "type": "ApiError",
+      "message": "Role was not found in this tenant",
+      "stack":
+          Error: Role was not found in this tenant
+              at RoleService.update (file:///D:/WEB%20PRO/AGIi/apps/backend/dist/services/role.service.js:29:19)
+              at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+              at async file:///D:/WEB%20PRO/AGIi/apps/backend/dist/controllers/tenants/role.controller.js:13:22
+      "statusCode": 404,
+      "code": "ROLE_NOT_FOUND"
+    }
+[2026-04-06 03:06:05.085 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 28,
+      "method": "PATCH",
+      "url": "/api/v1/roles/69d2d459f3b558ee3f6a4de2",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "localhost:4000",
+        "connection": "close",
+        "content-length": "336",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyZDQ1OWYzYjU1OGVlM2Y2YTRkZjEiLCJzZXNzaW9uSWQiOiJqNlVxQUltcGVzdE9rOTByTjIiLCJyb2xlSWRzIjpbIjY5ZDJkNDU5ZjNiNTU4ZWUzZjZhNGRlMiJdLCJwZXJtaXNzaW9ucyI6WyIqIl0sImlzUGxhdGZvcm1BZG1pbiI6dHJ1ZSwiZW1haWwiOiJhZG1pbkBhZWdpc3BsYW5lLmRldiIsImlhdCI6MTc3NTQyNDkwMiwiZXhwIjoxNzc1NDI1ODAyfQ.KUxRQnJjb53-6KqQkiEG8_UWY48az5Eks-UpNd5tEtk",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+        "content-type": "application/json",
+        "x-tenant-id": "69d2d459f3b558ee3f6a4dfb",
+        "sec-ch-ua-mobile": "?0",
+        "accept": "*/*",
+        "origin": "http://localhost:5173",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-dest": "empty",
+        "referer": "http://localhost:5173/roles",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9"
+      },
+      "remoteAddress": "::1",
+      "remotePort": 49404
+    }
+    res: {
+      "statusCode": 404,
+      "headers": {
+        "x-request-id": "e92Ax8NrCvSj",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "600;w=60",
+        "ratelimit-limit": "600",
+        "ratelimit-remaining": "596",
+        "ratelimit-reset": "54",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "124",
+        "etag": "W/\"7c-FV57QrUSL+qN/998z9L1T+/ylhE\""
+      }
+    }
+    responseTime: 11
+[2026-04-06 03:06:05.263 +0530] [31mERROR[39m: [36mRole was not found in this tenant[39m
+    service: "aegisplane-backend"
+    requestId: "bpOCDF51Aoix"
+    code: "ROLE_NOT_FOUND"
+    statusCode: 404
+    err: {
+      "type": "ApiError",
+      "message": "Role was not found in this tenant",
+      "stack":
+          Error: Role was not found in this tenant
+              at RoleService.update (file:///D:/WEB%20PRO/AGIi/apps/backend/dist/services/role.service.js:29:19)
+              at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+              at async file:///D:/WEB%20PRO/AGIi/apps/backend/dist/controllers/tenants/role.controller.js:13:22
+      "statusCode": 404,
+      "code": "ROLE_NOT_FOUND"
+    }
+[2026-04-06 03:06:05.264 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 29,
+      "method": "PATCH",
+      "url": "/api/v1/roles/69d2d459f3b558ee3f6a4de2",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "localhost:4000",
+        "connection": "close",
+        "content-length": "336",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyZDQ1OWYzYjU1OGVlM2Y2YTRkZjEiLCJzZXNzaW9uSWQiOiJqNlVxQUltcGVzdE9rOTByTjIiLCJyb2xlSWRzIjpbIjY5ZDJkNDU5ZjNiNTU4ZWUzZjZhNGRlMiJdLCJwZXJtaXNzaW9ucyI6WyIqIl0sImlzUGxhdGZvcm1BZG1pbiI6dHJ1ZSwiZW1haWwiOiJhZG1pbkBhZWdpc3BsYW5lLmRldiIsImlhdCI6MTc3NTQyNDkwMiwiZXhwIjoxNzc1NDI1ODAyfQ.KUxRQnJjb53-6KqQkiEG8_UWY48az5Eks-UpNd5tEtk",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+        "content-type": "application/json",
+        "x-tenant-id": "69d2d459f3b558ee3f6a4dfb",
+        "sec-ch-ua-mobile": "?0",
+        "accept": "*/*",
+        "origin": "http://localhost:5173",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-dest": "empty",
+        "referer": "http://localhost:5173/roles",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9"
+      },
+      "remoteAddress": "::1",
+      "remotePort": 58621
+    }
+    res: {
+      "statusCode": 404,
+      "headers": {
+        "x-request-id": "bpOCDF51Aoix",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "600;w=60",
+        "ratelimit-limit": "600",
+        "ratelimit-remaining": "595",
+        "ratelimit-reset": "54",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "124",
+        "etag": "W/\"7c-drzUx5zvESO6d0sAGoRW3ixd2XA\""
+      }
+    }
+    responseTime: 8
+[2026-04-06 03:06:05.491 +0530] [31mERROR[39m: [36mRole was not found in this tenant[39m
+    service: "aegisplane-backend"
+    requestId: "-asNGtVubpI9"
+    code: "ROLE_NOT_FOUND"
+    statusCode: 404
+    err: {
+      "type": "ApiError",
+      "message": "Role was not found in this tenant",
+      "stack":
+          Error: Role was not found in this tenant
+              at RoleService.update (file:///D:/WEB%20PRO/AGIi/apps/backend/dist/services/role.service.js:29:19)
+              at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+              at async file:///D:/WEB%20PRO/AGIi/apps/backend/dist/controllers/tenants/role.controller.js:13:22
+      "statusCode": 404,
+      "code": "ROLE_NOT_FOUND"
+    }
+[2026-04-06 03:06:05.492 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 30,
+      "method": "PATCH",
+      "url": "/api/v1/roles/69d2d459f3b558ee3f6a4de2",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "localhost:4000",
+        "connection": "close",
+        "content-length": "336",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyZDQ1OWYzYjU1OGVlM2Y2YTRkZjEiLCJzZXNzaW9uSWQiOiJqNlVxQUltcGVzdE9rOTByTjIiLCJyb2xlSWRzIjpbIjY5ZDJkNDU5ZjNiNTU4ZWUzZjZhNGRlMiJdLCJwZXJtaXNzaW9ucyI6WyIqIl0sImlzUGxhdGZvcm1BZG1pbiI6dHJ1ZSwiZW1haWwiOiJhZG1pbkBhZWdpc3BsYW5lLmRldiIsImlhdCI6MTc3NTQyNDkwMiwiZXhwIjoxNzc1NDI1ODAyfQ.KUxRQnJjb53-6KqQkiEG8_UWY48az5Eks-UpNd5tEtk",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+        "content-type": "application/json",
+        "x-tenant-id": "69d2d459f3b558ee3f6a4dfb",
+        "sec-ch-ua-mobile": "?0",
+        "accept": "*/*",
+        "origin": "http://localhost:5173",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-dest": "empty",
+        "referer": "http://localhost:5173/roles",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9"
+      },
+      "remoteAddress": "::1",
+      "remotePort": 58274
+    }
+    res: {
+      "statusCode": 404,
+      "headers": {
+        "x-request-id": "-asNGtVubpI9",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "600;w=60",
+        "ratelimit-limit": "600",
+        "ratelimit-remaining": "594",
+        "ratelimit-reset": "53",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "124",
+        "etag": "W/\"7c-9AdI5qXco0NMbcvRd0rsi9X6r0M\""
+      }
+    }
+    responseTime: 11
+[2026-04-06 03:06:18.050 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 31,
+      "method": "GET",
+      "url": "/api/v1/roles",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "localhost:4000",
+        "connection": "close",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyZDQ1OWYzYjU1OGVlM2Y2YTRkZjEiLCJzZXNzaW9uSWQiOiJqNlVxQUltcGVzdE9rOTByTjIiLCJyb2xlSWRzIjpbIjY5ZDJkNDU5ZjNiNTU4ZWUzZjZhNGRlMiJdLCJwZXJtaXNzaW9ucyI6WyIqIl0sImlzUGxhdGZvcm1BZG1pbiI6dHJ1ZSwiZW1haWwiOiJhZG1pbkBhZWdpc3BsYW5lLmRldiIsImlhdCI6MTc3NTQyNDkwMiwiZXhwIjoxNzc1NDI1ODAyfQ.KUxRQnJjb53-6KqQkiEG8_UWY48az5Eks-UpNd5tEtk",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+        "x-tenant-id": "69d2d459f3b558ee3f6a4dfb",
+        "sec-ch-ua-mobile": "?0",
+        "accept": "*/*",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-dest": "empty",
+        "referer": "http://localhost:5173/users",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9",
+        "if-none-match": "W/\"582-xNtF8rU4umtPpLgRhVSpccaoouM\""
+      },
+      "remoteAddress": "::1",
+      "remotePort": 52133
+    }
+    res: {
+      "statusCode": 304,
+      "headers": {
+        "x-request-id": "TBDe__39RLvx",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "600;w=60",
+        "ratelimit-limit": "600",
+        "ratelimit-remaining": "593",
+        "ratelimit-reset": "41",
+        "etag": "W/\"582-xNtF8rU4umtPpLgRhVSpccaoouM\""
+      }
+    }
+    responseTime: 8
+[2026-04-06 03:06:18.055 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 32,
+      "method": "GET",
+      "url": "/api/v1/users",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "localhost:4000",
+        "connection": "close",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyZDQ1OWYzYjU1OGVlM2Y2YTRkZjEiLCJzZXNzaW9uSWQiOiJqNlVxQUltcGVzdE9rOTByTjIiLCJyb2xlSWRzIjpbIjY5ZDJkNDU5ZjNiNTU4ZWUzZjZhNGRlMiJdLCJwZXJtaXNzaW9ucyI6WyIqIl0sImlzUGxhdGZvcm1BZG1pbiI6dHJ1ZSwiZW1haWwiOiJhZG1pbkBhZWdpc3BsYW5lLmRldiIsImlhdCI6MTc3NTQyNDkwMiwiZXhwIjoxNzc1NDI1ODAyfQ.KUxRQnJjb53-6KqQkiEG8_UWY48az5Eks-UpNd5tEtk",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+        "x-tenant-id": "69d2d459f3b558ee3f6a4dfb",
+        "sec-ch-ua-mobile": "?0",
+        "accept": "*/*",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-dest": "empty",
+        "referer": "http://localhost:5173/users",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9",
+        "if-none-match": "W/\"616-Rt73fBrA0vbdU8glNF6Yb3z12+A\""
+      },
+      "remoteAddress": "::1",
+      "remotePort": 52134
+    }
+    res: {
+      "statusCode": 304,
+      "headers": {
+        "x-request-id": "5L7yVvUXhdg4",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "600;w=60",
+        "ratelimit-limit": "600",
+        "ratelimit-remaining": "592",
+        "ratelimit-reset": "41",
+        "etag": "W/\"616-Rt73fBrA0vbdU8glNF6Yb3z12+A\""
+      }
+    }
+    responseTime: 10
+[2026-04-06 03:06:21.162 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 33,
+      "method": "GET",
+      "url": "/api/v1/dashboard",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "localhost:4000",
+        "connection": "close",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyZDQ1OWYzYjU1OGVlM2Y2YTRkZjEiLCJzZXNzaW9uSWQiOiJqNlVxQUltcGVzdE9rOTByTjIiLCJyb2xlSWRzIjpbIjY5ZDJkNDU5ZjNiNTU4ZWUzZjZhNGRlMiJdLCJwZXJtaXNzaW9ucyI6WyIqIl0sImlzUGxhdGZvcm1BZG1pbiI6dHJ1ZSwiZW1haWwiOiJhZG1pbkBhZWdpc3BsYW5lLmRldiIsImlhdCI6MTc3NTQyNDkwMiwiZXhwIjoxNzc1NDI1ODAyfQ.KUxRQnJjb53-6KqQkiEG8_UWY48az5Eks-UpNd5tEtk",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+        "sec-ch-ua-mobile": "?0",
+        "accept": "*/*",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-dest": "empty",
+        "referer": "http://localhost:5173/dashboard",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9",
+        "if-none-match": "W/\"51a-z0XyO2AQLH1TlH3UYwDjsK/8xnM\""
+      },
+      "remoteAddress": "::1",
+      "remotePort": 60584
+    }
+    res: {
+      "statusCode": 200,
+      "headers": {
+        "x-request-id": "a0_YadIjjiqW",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "600;w=60",
+        "ratelimit-limit": "600",
+        "ratelimit-remaining": "591",
+        "ratelimit-reset": "38",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "2412",
+        "etag": "W/\"96c-uRNn8KP/CBm4duK5YQWSvfEYVfc\""
+      }
+    }
+    responseTime: 11
+[2026-04-06 03:06:25.779 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 34,
+      "method": "GET",
+      "url": "/api/v1/tenants",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "localhost:4000",
+        "connection": "close",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyZDQ1OWYzYjU1OGVlM2Y2YTRkZjEiLCJzZXNzaW9uSWQiOiJqNlVxQUltcGVzdE9rOTByTjIiLCJyb2xlSWRzIjpbIjY5ZDJkNDU5ZjNiNTU4ZWUzZjZhNGRlMiJdLCJwZXJtaXNzaW9ucyI6WyIqIl0sImlzUGxhdGZvcm1BZG1pbiI6dHJ1ZSwiZW1haWwiOiJhZG1pbkBhZWdpc3BsYW5lLmRldiIsImlhdCI6MTc3NTQyNDkwMiwiZXhwIjoxNzc1NDI1ODAyfQ.KUxRQnJjb53-6KqQkiEG8_UWY48az5Eks-UpNd5tEtk",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+        "sec-ch-ua-mobile": "?0",
+        "accept": "*/*",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-dest": "empty",
+        "referer": "http://localhost:5173/tenants",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9",
+        "if-none-match": "W/\"172-tDqestIBytPy3cYaTBJApF6o83E\""
+      },
+      "remoteAddress": "::1",
+      "remotePort": 49773
+    }
+    res: {
+      "statusCode": 304,
+      "headers": {
+        "x-request-id": "cEU39yxDtbdU",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "600;w=60",
+        "ratelimit-limit": "600",
+        "ratelimit-remaining": "590",
+        "ratelimit-reset": "33",
+        "etag": "W/\"172-tDqestIBytPy3cYaTBJApF6o83E\""
+      }
+    }
+    responseTime: 5
+[2026-04-06 03:06:33.647 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 35,
+      "method": "GET",
+      "url": "/api/v1/health",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "localhost:4000",
+        "connection": "keep-alive",
+        "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+        "sec-fetch-site": "none",
+        "sec-fetch-mode": "navigate",
+        "sec-fetch-user": "?1",
+        "sec-fetch-dest": "document",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9"
+      },
+      "remoteAddress": "::1",
+      "remotePort": 58002
+    }
+    res: {
+      "statusCode": 200,
+      "headers": {
+        "x-request-id": "ZFCZWCQcxW6w",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "600;w=60",
+        "ratelimit-limit": "600",
+        "ratelimit-remaining": "589",
+        "ratelimit-reset": "25",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "99",
+        "etag": "W/\"63-6UHGOcECWYfQXZjmcJrnwG3ptBI\""
+      }
+    }
+    responseTime: 1
+[2026-04-06 03:06:33.726 +0530] [31mERROR[39m: [36mRoute not found: GET /favicon.ico[39m
+    service: "aegisplane-backend"
+    requestId: "_Oig1EYW4xWW"
+    code: "NOT_FOUND"
+    statusCode: 404
+    err: {
+      "type": "ApiError",
+      "message": "Route not found: GET /favicon.ico",
+      "stack":
+          Error: Route not found: GET /favicon.ico
+              at notFoundHandler (file:///D:/WEB%20PRO/AGIi/apps/backend/dist/middleware/not-found.js:3:11)
+              at Layer.handle [as handle_request] (D:\WEB PRO\AGIi\node_modules\express\lib\router\layer.js:95:5)
+              at trim_prefix (D:\WEB PRO\AGIi\node_modules\express\lib\router\index.js:328:13)
+              at D:\WEB PRO\AGIi\node_modules\express\lib\router\index.js:286:9
+              at Function.process_params (D:\WEB PRO\AGIi\node_modules\express\lib\router\index.js:346:12)
+              at next (D:\WEB PRO\AGIi\node_modules\express\lib\router\index.js:280:10)
+              at file:///D:/WEB%20PRO/AGIi/node_modules/express-rate-limit/dist/index.mjs:779:7
+              at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+              at async file:///D:/WEB%20PRO/AGIi/node_modules/express-rate-limit/dist/index.mjs:663:5
+      "statusCode": 404,
+      "code": "NOT_FOUND"
+    }
+[2026-04-06 03:06:33.727 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 36,
+      "method": "GET",
+      "url": "/favicon.ico",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "localhost:4000",
+        "connection": "keep-alive",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+        "sec-ch-ua-mobile": "?0",
+        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-mode": "no-cors",
+        "sec-fetch-dest": "image",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9"
+      },
+      "remoteAddress": "::1",
+      "remotePort": 58002
+    }
+    res: {
+      "statusCode": 404,
+      "headers": {
+        "x-request-id": "_Oig1EYW4xWW",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "600;w=60",
+        "ratelimit-limit": "600",
+        "ratelimit-remaining": "588",
+        "ratelimit-reset": "25",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "119",
+        "etag": "W/\"77-ePhkEIdnZQaJ49XkZiXtwKivB9I\""
+      }
+    }
+    responseTime: 2
+[2026-04-06 03:19:53.654 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 37,
+      "method": "POST",
+      "url": "/api/v1/auth/login",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "localhost:4000",
+        "connection": "close",
+        "content-length": "61",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+        "content-type": "application/json",
+        "sec-ch-ua-mobile": "?0",
+        "accept": "*/*",
+        "origin": "http://localhost:5173",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-dest": "empty",
+        "referer": "http://localhost:5173/login",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9"
+      },
+      "remoteAddress": "::1",
+      "remotePort": 49671
+    }
+    res: {
+      "statusCode": 200,
+      "headers": {
+        "x-request-id": "D3eJi0hvXj0K",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "25;w=900",
+        "ratelimit-limit": "25",
+        "ratelimit-remaining": "21",
+        "ratelimit-reset": "4",
+        "set-cookie": "refreshToken=6a970f173b741e86703c39f075695632495f88077a965bd2dabf08c40614785d036db08ab686d38213bd20dc6c4f8430; Domain=localhost; Path=/api/v1/auth/refresh; Expires=Tue, 05 May 2026 21:49:53 GMT; HttpOnly; Secure; SameSite=Strict",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "697",
+        "etag": "W/\"2b9-7uQZQCTz+JG6ACrXDvt0PUBDRu0\""
+      }
+    }
+    responseTime: 495
+[2026-04-06 03:19:53.813 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 39,
+      "method": "GET",
+      "url": "/api/v1/tenants",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "localhost:4000",
+        "connection": "close",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyZDQ1OWYzYjU1OGVlM2Y2YTRkZjEiLCJzZXNzaW9uSWQiOiJzR2RCcGxFaGE1SEJHczlybzkiLCJyb2xlSWRzIjpbIjY5ZDJkNDU5ZjNiNTU4ZWUzZjZhNGRlMiJdLCJwZXJtaXNzaW9ucyI6WyIqIl0sImlzUGxhdGZvcm1BZG1pbiI6dHJ1ZSwiZW1haWwiOiJhZG1pbkBhZWdpc3BsYW5lLmRldiIsImlhdCI6MTc3NTQyNTc5MywiZXhwIjoxNzc1NDI2NjkzfQ.QDkbUzaYovW2hSs5BHZPEfoAYb-KUHSlVwfmDjMaknE",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+        "sec-ch-ua-mobile": "?0",
+        "accept": "*/*",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-dest": "empty",
+        "referer": "http://localhost:5173/dashboard",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9",
+        "if-none-match": "W/\"172-tDqestIBytPy3cYaTBJApF6o83E\""
+      },
+      "remoteAddress": "::1",
+      "remotePort": 60935
+    }
+    res: {
+      "statusCode": 304,
+      "headers": {
+        "x-request-id": "Iw0yUEaMHuve",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "600;w=60",
+        "ratelimit-limit": "600",
+        "ratelimit-remaining": "597",
+        "ratelimit-reset": "60",
+        "etag": "W/\"172-tDqestIBytPy3cYaTBJApF6o83E\""
+      }
+    }
+    responseTime: 12
+[2026-04-06 03:19:53.814 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 40,
+      "method": "GET",
+      "url": "/api/v1/features",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "localhost:4000",
+        "connection": "close",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyZDQ1OWYzYjU1OGVlM2Y2YTRkZjEiLCJzZXNzaW9uSWQiOiJzR2RCcGxFaGE1SEJHczlybzkiLCJyb2xlSWRzIjpbIjY5ZDJkNDU5ZjNiNTU4ZWUzZjZhNGRlMiJdLCJwZXJtaXNzaW9ucyI6WyIqIl0sImlzUGxhdGZvcm1BZG1pbiI6dHJ1ZSwiZW1haWwiOiJhZG1pbkBhZWdpc3BsYW5lLmRldiIsImlhdCI6MTc3NTQyNTc5MywiZXhwIjoxNzc1NDI2NjkzfQ.QDkbUzaYovW2hSs5BHZPEfoAYb-KUHSlVwfmDjMaknE",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+        "sec-ch-ua-mobile": "?0",
+        "accept": "*/*",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-dest": "empty",
+        "referer": "http://localhost:5173/dashboard",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9",
+        "if-none-match": "W/\"4c4-2GNUNiTaDf4M9C+JiYDMC9LY8sA\""
+      },
+      "remoteAddress": "::1",
+      "remotePort": 60936
+    }
+    res: {
+      "statusCode": 304,
+      "headers": {
+        "x-request-id": "DB_QHeI8OLie",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "600;w=60",
+        "ratelimit-limit": "600",
+        "ratelimit-remaining": "596",
+        "ratelimit-reset": "60",
+        "etag": "W/\"4c4-2GNUNiTaDf4M9C+JiYDMC9LY8sA\""
+      }
+    }
+    responseTime: 9
+[2026-04-06 03:19:53.815 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 38,
+      "method": "GET",
+      "url": "/api/v1/dashboard",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "localhost:4000",
+        "connection": "close",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyZDQ1OWYzYjU1OGVlM2Y2YTRkZjEiLCJzZXNzaW9uSWQiOiJzR2RCcGxFaGE1SEJHczlybzkiLCJyb2xlSWRzIjpbIjY5ZDJkNDU5ZjNiNTU4ZWUzZjZhNGRlMiJdLCJwZXJtaXNzaW9ucyI6WyIqIl0sImlzUGxhdGZvcm1BZG1pbiI6dHJ1ZSwiZW1haWwiOiJhZG1pbkBhZWdpc3BsYW5lLmRldiIsImlhdCI6MTc3NTQyNTc5MywiZXhwIjoxNzc1NDI2NjkzfQ.QDkbUzaYovW2hSs5BHZPEfoAYb-KUHSlVwfmDjMaknE",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+        "sec-ch-ua-mobile": "?0",
+        "accept": "*/*",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-dest": "empty",
+        "referer": "http://localhost:5173/dashboard",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9",
+        "if-none-match": "W/\"96c-uRNn8KP/CBm4duK5YQWSvfEYVfc\""
+      },
+      "remoteAddress": "::1",
+      "remotePort": 60934
+    }
+    res: {
+      "statusCode": 200,
+      "headers": {
+        "x-request-id": "zWRE1GXyTkJp",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "600;w=60",
+        "ratelimit-limit": "600",
+        "ratelimit-remaining": "598",
+        "ratelimit-reset": "60",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "2865",
+        "etag": "W/\"b31-XVjXYeExtCLrw0KOU8JZprf5Kic\""
+      }
+    }
+    responseTime: 18
+[2026-04-06 03:20:53.058 +0530] [32mINFO[39m: [36mrequest completed[39m
+    service: "aegisplane-backend"
+    req: {
+      "id": 41,
+      "method": "GET",
+      "url": "/api/v1/dashboard",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "localhost:4000",
+        "connection": "close",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQyZDQ1OWYzYjU1OGVlM2Y2YTRkZjEiLCJzZXNzaW9uSWQiOiJzR2RCcGxFaGE1SEJHczlybzkiLCJyb2xlSWRzIjpbIjY5ZDJkNDU5ZjNiNTU4ZWUzZjZhNGRlMiJdLCJwZXJtaXNzaW9ucyI6WyIqIl0sImlzUGxhdGZvcm1BZG1pbiI6dHJ1ZSwiZW1haWwiOiJhZG1pbkBhZWdpc3BsYW5lLmRldiIsImlhdCI6MTc3NTQyNTc5MywiZXhwIjoxNzc1NDI2NjkzfQ.QDkbUzaYovW2hSs5BHZPEfoAYb-KUHSlVwfmDjMaknE",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+        "sec-ch-ua-mobile": "?0",
+        "accept": "*/*",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-dest": "empty",
+        "referer": "http://localhost:5173/dashboard",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9",
+        "if-none-match": "W/\"b31-XVjXYeExtCLrw0KOU8JZprf5Kic\""
+      },
+      "remoteAddress": "::1",
+      "remotePort": 55697
+    }
+    res: {
+      "statusCode": 304,
+      "headers": {
+        "x-request-id": "lw4oDZe1cf9C",
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "access-control-allow-credentials": "true",
+        "ratelimit-policy": "600;w=60",
+        "ratelimit-limit": "600",
+        "ratelimit-remaining": "595",
+        "ratelimit-reset": "1",
+        "etag": "W/\"b31-XVjXYeExtCLrw0KOU8JZprf5Kic\""
+      }
+    }
+    responseTime: 12

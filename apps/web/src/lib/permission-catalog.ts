@@ -1,0 +1,20 @@
+export const permissionCatalog = [
+  'tenant:create',
+  'tenant:read',
+  'tenant:update',
+  'user:create',
+  'user:read',
+  'user:update',
+  'user:disable',
+  'role:create',
+  'role:read',
+  'role:update',
+  'billing:view',
+  'billing:manage',
+  'audit:read',
+  'featureFlag:read',
+  'featureFlag:update',
+  'subscription:read',
+  'subscription:update',
+  'system:read'
+] as const;

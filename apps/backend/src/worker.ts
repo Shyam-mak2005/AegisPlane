@@ -3,12 +3,12 @@ import './jobs/processors/email.processor.js';
 import './jobs/processors/subscription.processor.js';
 import './jobs/processors/summary.processor.js';
 import { connectDatabase } from '@/config/database.js';
-import { connectRedis } from '@/config/redis.js';
+import { redis } from '@/config/redis.js';
 import { logger } from '@/shared/logger/logger.js';
 
 const startWorker = async () => {
   await connectDatabase();
-  await connectRedis();
+  await redis.ping();
   logger.info('AegisPlane worker runtime started');
 };
 

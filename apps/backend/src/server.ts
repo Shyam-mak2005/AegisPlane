@@ -1,13 +1,13 @@
 import { createApp } from '@/app.js';
 import { connectDatabase } from '@/config/database.js';
-import { connectRedis } from '@/config/redis.js';
+import { redis } from '@/config/redis.js';
 import { env } from '@/config/env.js';
 import { bootstrapService } from '@/services/bootstrap.service.js';
 import { logger } from '@/shared/logger/logger.js';
 
 const start = async () => {
   await connectDatabase();
-  await connectRedis();
+  await redis.ping();
   await bootstrapService.run();
 
   const app = createApp();

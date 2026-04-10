@@ -1,0 +1,146 @@
+
+> aegisplane@1.0.0 dev
+> concurrently "npm run dev --workspace @aegisplane/backend" "npm run dev:worker --workspace @aegisplane/backend" "npm run dev --workspace @aegisplane/web"
+
+[1] 
+[1] > @aegisplane/backend@1.0.0 dev:worker
+[1] > tsx watch src/worker.ts
+[1] 
+[2] 
+[2] > @aegisplane/web@1.0.0 dev
+[2] > vite
+[2] 
+[0] 
+[0] > @aegisplane/backend@1.0.0 dev
+[0] > tsx watch src/server.ts
+[0] 
+[2] 
+[2]   [32m[1mVITE[22m v5.4.21[39m  [2mready in [0m[1m849[22m[2m[0m ms[22m
+[2] 
+[2]   [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2] [2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+[1] [2026-04-09 23:37:33.615 +0530] [32mINFO[39m: [36mDatabase connection established[39m
+[1]     service: "aegisplane-backend"
+[0] [2026-04-09 23:37:33.624 +0530] [32mINFO[39m: [36mDatabase connection established[39m
+[0]     service: "aegisplane-backend"
+[2] [2m11:37:46 pm[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/v1/dashboard[39m
+[2] AggregateError [ECONNREFUSED]: 
+[2]     at internalConnectMultiple (node:net:1134:18)
+[2]     at afterConnectMultiple (node:net:1715:7)
+[2] [2m11:37:46 pm[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/v1/tenants[39m
+[2] AggregateError [ECONNREFUSED]: 
+[2]     at internalConnectMultiple (node:net:1134:18)
+[2]     at afterConnectMultiple (node:net:1715:7)
+[2] [2m11:37:46 pm[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/v1/features[39m
+[2] AggregateError [ECONNREFUSED]: 
+[2]     at internalConnectMultiple (node:net:1134:18)
+[2]     at afterConnectMultiple (node:net:1715:7)
+[2] [2m11:37:47 pm[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/v1/dashboard[39m
+[2] AggregateError [ECONNREFUSED]: 
+[2]     at internalConnectMultiple (node:net:1134:18)
+[2]     at afterConnectMultiple (node:net:1715:7)
+[2] [2m11:37:47 pm[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/v1/tenants[39m
+[2] AggregateError [ECONNREFUSED]: 
+[2]     at internalConnectMultiple (node:net:1134:18)
+[2]     at afterConnectMultiple (node:net:1715:7)
+[2] [2m11:37:47 pm[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/v1/features[39m
+[2] AggregateError [ECONNREFUSED]: 
+[2]     at internalConnectMultiple (node:net:1134:18)
+[2]     at afterConnectMultiple (node:net:1715:7)
+[2] [2m11:37:49 pm[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/v1/tenants[39m
+[2] AggregateError [ECONNREFUSED]: 
+[2]     at internalConnectMultiple (node:net:1134:18)
+[2]     at afterConnectMultiple (node:net:1715:7)
+[2] [2m11:37:50 pm[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/v1/tenants[39m
+[2] AggregateError [ECONNREFUSED]: 
+[2]     at internalConnectMultiple (node:net:1134:18)
+[2]     at afterConnectMultiple (node:net:1715:7)
+[2] [2m11:37:51 pm[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/v1/users[39m
+[2] AggregateError [ECONNREFUSED]: 
+[2]     at internalConnectMultiple (node:net:1134:18)
+[2]     at afterConnectMultiple (node:net:1715:7)
+[2] [2m11:37:51 pm[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/v1/roles[39m
+[2] AggregateError [ECONNREFUSED]: 
+[2]     at internalConnectMultiple (node:net:1134:18)
+[2]     at afterConnectMultiple (node:net:1715:7)
+[2] [2m11:37:52 pm[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/v1/roles[39m
+[2] AggregateError [ECONNREFUSED]: 
+[2]     at internalConnectMultiple (node:net:1134:18)
+[2]     at afterConnectMultiple (node:net:1715:7)
+[2] [2m11:37:52 pm[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/v1/users[39m
+[2] AggregateError [ECONNREFUSED]: 
+[2]     at internalConnectMultiple (node:net:1134:18)
+[2]     at afterConnectMultiple (node:net:1715:7)
+[2] [2m11:37:52 pm[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/v1/features[39m
+[2] AggregateError [ECONNREFUSED]: 
+[2]     at internalConnectMultiple (node:net:1134:18)
+[2]     at afterConnectMultiple (node:net:1715:7)
+[2] [2m11:37:53 pm[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/v1/features[39m
+[2] AggregateError [ECONNREFUSED]: 
+[2]     at internalConnectMultiple (node:net:1134:18)
+[2]     at afterConnectMultiple (node:net:1715:7)
+[2] [2m11:37:53 pm[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/v1/roles[39m
+[2] AggregateError [ECONNREFUSED]: 
+[2]     at internalConnectMultiple (node:net:1134:18)
+[2]     at afterConnectMultiple (node:net:1715:7)
+[2] [2m11:37:54 pm[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/v1/roles[39m
+[2] AggregateError [ECONNREFUSED]: 
+[2]     at internalConnectMultiple (node:net:1134:18)
+[2]     at afterConnectMultiple (node:net:1715:7)
+[2] [2m11:37:55 pm[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/v1/dashboard[39m
+[2] AggregateError [ECONNREFUSED]: 
+[2]     at internalConnectMultiple (node:net:1134:18)
+[2]     at afterConnectMultiple (node:net:1715:7)
+[2] [2m11:37:56 pm[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/v1/dashboard[39m
+[2] AggregateError [ECONNREFUSED]: 
+[2]     at internalConnectMultiple (node:net:1134:18)
+[2]     at afterConnectMultiple (node:net:1715:7)
+[1] [2026-04-10 00:34:47.813 +0530] [33mWARN[39m: [36mMongoDB connection disconnected[39m
+[1]     service: "aegisplane-backend"
+[0] [2026-04-10 00:34:47.841 +0530] [33mWARN[39m: [36mMongoDB connection disconnected[39m
+[0]     service: "aegisplane-backend"
+[0] [2026-04-10 00:34:47.863 +0530] [32mINFO[39m: [36mMongoDB connected successfully[39m
+[0]     service: "aegisplane-backend"
+[1] [2026-04-10 00:34:47.833 +0530] [32mINFO[39m: [36mMongoDB connected successfully[39m
+[1]     service: "aegisplane-backend"
+[2] [2m12:34:49 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/v1/dashboard[39m
+[2] AggregateError [ECONNREFUSED]: 
+[2]     at internalConnectMultiple (node:net:1134:18)
+[2]     at afterConnectMultiple (node:net:1715:7)
+[2] [2m12:34:49 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/v1/tenants[39m
+[2] AggregateError [ECONNREFUSED]: 
+[2]     at internalConnectMultiple (node:net:1134:18)
+[2]     at afterConnectMultiple (node:net:1715:7)
+[2] [2m12:34:49 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/v1/features[39m
+[2] AggregateError [ECONNREFUSED]: 
+[2]     at internalConnectMultiple (node:net:1134:18)
+[2]     at afterConnectMultiple (node:net:1715:7)
+[2] [2m12:35:04 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/v1/tenants[39m
+[2] AggregateError [ECONNREFUSED]: 
+[2]     at internalConnectMultiple (node:net:1134:18)
+[2]     at afterConnectMultiple (node:net:1715:7)
+[2] [2m12:35:04 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/v1/features[39m
+[2] AggregateError [ECONNREFUSED]: 
+[2]     at internalConnectMultiple (node:net:1134:18)
+[2]     at afterConnectMultiple (node:net:1715:7)
+[2] [2m12:35:04 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/v1/dashboard[39m
+[2] AggregateError [ECONNREFUSED]: 
+[2]     at internalConnectMultiple (node:net:1134:18)
+[2]     at afterConnectMultiple (node:net:1715:7)
+[1] npm run dev:worker --workspace @aegisplane/backend exited with code 1073807364
+[2] npm error Lifecycle script `dev` failed with error:
+[2] npm error code 1073807364
+[2] npm error path D:\WEB PRO\AGIi\apps\web
+[2] npm error workspace @aegisplane/web@1.0.0
+[2] npm error location D:\WEB PRO\AGIi\apps\web
+[2] npm error command failed
+[2] npm error command C:\WINDOWS\system32\cmd.exe /d /s /c vite
+[0] npm error Lifecycle script `dev` failed with error:
+[0] npm error code 1073807364
+[0] npm error path D:\WEB PRO\AGIi\apps\backend
+[0] npm error workspace @aegisplane/backend@1.0.0
+[0] npm error location D:\WEB PRO\AGIi\apps\backend
+[0] npm error command failed
+[0] npm error command C:\WINDOWS\system32\cmd.exe /d /s /c tsx watch src/server.ts
+[2] npm run dev --workspace @aegisplane/web exited with code 1073807364
+[0] npm run dev --workspace @aegisplane/backend exited with code 1073807364

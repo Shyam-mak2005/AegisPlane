@@ -1,14 +1,16 @@
-import './jobs/processors/audit.processor.js';
-import './jobs/processors/email.processor.js';
-import './jobs/processors/subscription.processor.js';
-import './jobs/processors/summary.processor.js';
 import { connectDatabase } from '@/config/database.js';
-import { redis } from '@/config/redis.js';
+import { ensureRedisConnection } from '@/config/redis.js';
 import { logger } from '@/shared/logger/logger.js';
 
 const startWorker = async () => {
   await connectDatabase();
-  await redis.ping();
+  await ensureRedisConnection({ required: true });
+
+  await import('./jobs/processors/audit.processor.js');
+  await import('./jobs/processors/email.processor.js');
+  await import('./jobs/processors/subscription.processor.js');
+  await import('./jobs/processors/summary.processor.js');
+
   logger.info('AegisPlane worker runtime started');
 };
 

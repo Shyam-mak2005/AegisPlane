@@ -3,13 +3,15 @@ import { z } from 'zod';
 
 dotenv.config();
 
+const optionalString = z.string().trim().transform((value) => value.length > 0 ? value : undefined).optional();
+
 const envSchema = z.object({
   NODE_ENV: z.enum(['development', 'test', 'production']).default('development'),
   PORT: z.coerce.number().default(4000),
-  APP_ORIGIN: z.string().url().default('http://localhost:5173'),
+  APP_ORIGIN: z.string().url(),
   API_PREFIX: z.string().default('/api/v1'),
   MONGO_URI: z.string().min(1),
-  REDIS_URL: z.string().min(1),
+  REDIS_URL: optionalString,
   JWT_ACCESS_SECRET: z.string().min(16),
   JWT_REFRESH_SECRET: z.string().min(16),
   JWT_ACCESS_TTL: z.string().default('15m'),
@@ -28,8 +30,8 @@ const envSchema = z.object({
   LOG_LEVEL: z.enum(['fatal', 'error', 'warn', 'info', 'debug', 'trace']).default('info'),
   QUEUE_PREFIX: z.string().default('aegisplane'),
   SMTP_FROM: z.string().email(),
-  SMTP_HOST: z.string().default('mailhog'),
-  SMTP_PORT: z.coerce.number().default(1025)
+  SMTP_HOST: z.string(),
+  SMTP_PORT: z.coerce.number()
 });
 
 export const env = envSchema.parse(process.env);

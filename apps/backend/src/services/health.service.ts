@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { redis } from '@/config/redis.js';
+import { getRedisStatus, isRedisConfigured } from '@/config/redis.js';
 
 export class HealthService {
   async getHealth() {
@@ -12,13 +12,14 @@ export class HealthService {
 
   async getReadiness() {
     const mongoReady = mongoose.connection.readyState === 1;
-    const redisReady = redis.status === 'ready';
+    const redisConfigured = isRedisConfigured();
+    const redisReady = !redisConfigured || getRedisStatus() === 'ready';
 
     return {
       status: mongoReady && redisReady ? 'ready' : 'degraded',
       checks: {
         mongo: mongoReady,
-        redis: redisReady
+        redis: redisConfigured ? redisReady : 'disabled'
       }
     };
   }

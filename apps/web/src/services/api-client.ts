@@ -18,8 +18,9 @@ export class ApiClientError extends Error {
   }
 }
 
-const API_BASE_URL = (import.meta.env.VITE_API_URL as string || '').replace(/\/$/, '');
-const API_PREFIX = API_BASE_URL.includes('/api/v1') ? API_BASE_URL : `${API_BASE_URL}/api/v1`;
+// Ensure URL is clean and includes prefix
+const RAW_URL = (import.meta.env.VITE_API_URL as string || '').replace(/\/$/, '');
+const API_PREFIX = RAW_URL.includes('/api/v1') ? RAW_URL : `${RAW_URL}/api/v1`;
 
 const getDefaultRoute = (permissions: string[], isPlatformAdmin: boolean) => {
   if (isPlatformAdmin || permissions.includes('system:read')) return '/dashboard';
@@ -32,9 +33,7 @@ const getDefaultRoute = (permissions: string[], isPlatformAdmin: boolean) => {
 const parsePayload = async <T>(response: Response): Promise<T> => {
   const contentType = response.headers.get('content-type');
   const payload = contentType?.includes('application/json') ? await response.json() : {};
-  if (!response.ok) {
-    throw new ApiClientError(response.status, payload.error || payload);
-  }
+  if (!response.ok) throw new ApiClientError(response.status, payload.error || payload);
   return payload.data as T;
 };
 
@@ -79,7 +78,7 @@ const request = async <T>(path: string, options: RequestInit & { tenantId?: stri
       return request<T>(path, { ...options, retryOn401: false });
     } catch {
       clearSession();
-      throw new ApiClientError(401, { code: 'SESSION_EXPIRED', message: 'Your session has expired.' });
+      throw new ApiClientError(401, { code: 'SESSION_EXPIRED', message: 'Session expired' });
     }
   }
 
@@ -119,25 +118,25 @@ export const apiClient = {
 export const queryKeys = {
   dashboard: ['dashboard'] as const,
   tenants: ['tenants'] as const,
-  users: (tenantId: string) => ['users', tenantId] as const,
-  user: (tenantId: string, userId: string) => ['user', tenantId, userId] as const,
-  roles: (tenantId: string) => ['roles', tenantId] as const,
+  users: (id: string) => ['users', id],
+  user: (tId: string, uId: string) => ['user', tId, uId],
+  roles: (id: string) => ['roles', id],
   features: ['features'] as const,
   plans: ['plans'] as const,
-  subscription: (tenantId: string) => ['subscription', tenantId] as const,
-  auditLogs: (tenantId: string) => ['audit-logs', tenantId] as const,
+  subscription: (id: string) => ['subscription', id],
+  auditLogs: (id: string) => ['audit-logs', id],
   me: ['me'] as const
 };
 
 export const useDashboardOverview = () => useQuery({ queryKey: queryKeys.dashboard, queryFn: apiClient.getDashboardOverview });
 export const useTenants = (enabled = true) => useQuery({ queryKey: queryKeys.tenants, queryFn: apiClient.getTenants, enabled });
-export const useUsers = (tenantId: string | null) => useQuery({ queryKey: queryKeys.users(tenantId ?? 'none'), queryFn: () => apiClient.getUsers(tenantId!), enabled: !!tenantId });
-export const useUser = (tenantId: string | null, userId: string | undefined) => useQuery({ queryKey: queryKeys.user(tenantId ?? 'none', userId ?? 'none'), queryFn: () => apiClient.getUser(tenantId!, userId!), enabled: !!(tenantId && userId) });
-export const useRoles = (tenantId: string | null) => useQuery({ queryKey: queryKeys.roles(tenantId ?? 'none'), queryFn: () => apiClient.getRoles(tenantId!), enabled: !!tenantId });
+export const useUsers = (tId: string | null) => useQuery({ queryKey: queryKeys.users(tId ?? ''), queryFn: () => apiClient.getUsers(tId!), enabled: !!tId });
+export const useUser = (tId: string | null, uId: string | undefined) => useQuery({ queryKey: queryKeys.user(tId ?? '', uId ?? ''), queryFn: () => apiClient.getUser(tId!, uId!), enabled: !!(tId && uId) });
+export const useRoles = (tId: string | null) => useQuery({ queryKey: queryKeys.roles(tId ?? ''), queryFn: () => apiClient.getRoles(tId!), enabled: !!tId });
 export const useFeatureFlags = (enabled = true) => useQuery({ queryKey: queryKeys.features, queryFn: apiClient.getFeatureFlags, enabled });
 export const usePlans = () => useQuery({ queryKey: queryKeys.plans, queryFn: apiClient.getPlans });
-export const useTenantSubscription = (tenantId: string | null) => useQuery({ queryKey: queryKeys.subscription(tenantId ?? 'none'), queryFn: () => apiClient.getTenantSubscription(tenantId!), enabled: !!tenantId });
-export const useAuditLogs = (tenantId: string | null) => useQuery({ queryKey: queryKeys.auditLogs(tenantId ?? 'none'), queryFn: () => apiClient.getAuditLogs(tenantId!), enabled: !!tenantId });
+export const useTenantSubscription = (tId: string | null) => useQuery({ queryKey: queryKeys.subscription(tId ?? ''), queryFn: () => apiClient.getTenantSubscription(tId!), enabled: !!tId });
+export const useAuditLogs = (tId: string | null) => useQuery({ queryKey: queryKeys.auditLogs(tId ?? ''), queryFn: () => apiClient.getAuditLogs(tId!), enabled: !!tId });
 export const useCurrentUser = (enabled = true) => useQuery({ queryKey: queryKeys.me, queryFn: apiClient.getCurrentUser, enabled });
 
 export const useLoginMutation = () => {
@@ -194,46 +193,31 @@ export const useUpdateTenantPlanMutation = () => {
   });
 };
 
-export const useCreateUserMutation = (tenantId: string) => {
-  const queryClient = useQueryClient();
-  return useMutation({
-    mutationFn: (payload: any) => apiClient.createUser(tenantId, payload),
-    onSuccess: () => queryClient.invalidateQueries({ queryKey: queryKeys.users(tenantId) })
-  });
+export const useCreateUserMutation = (tId: string) => {
+  const qc = useQueryClient();
+  return useMutation({ mutationFn: (p: any) => apiClient.createUser(tId, p), onSuccess: () => qc.invalidateQueries({ queryKey: queryKeys.users(tId) }) });
 };
 
-export const useUpdateUserRolesMutation = (tenantId: string) => {
-  const queryClient = useQueryClient();
-  return useMutation({
-    mutationFn: ({ userId, roleIds }: { userId: string; roleIds: string[] }) => apiClient.updateUserRoles(tenantId, userId, roleIds),
-    onSuccess: () => queryClient.invalidateQueries({ queryKey: queryKeys.users(tenantId) })
-  });
+export const useUpdateUserRolesMutation = (tId: string) => {
+  const qc = useQueryClient();
+  return useMutation({ mutationFn: ({ userId, roleIds }: { userId: string; roleIds: string[] }) => apiClient.updateUserRoles(tId, userId, roleIds), onSuccess: () => qc.invalidateQueries({ queryKey: queryKeys.users(tId) }) });
 };
 
-export const useDisableUserMutation = (tenantId: string) => {
-  const queryClient = useQueryClient();
-  return useMutation({
-    mutationFn: (userId: string) => apiClient.disableUser(tenantId, userId),
-    onSuccess: () => queryClient.invalidateQueries({ queryKey: queryKeys.users(tenantId) })
-  });
+export const useDisableUserMutation = (tId: string) => {
+  const qc = useQueryClient();
+  return useMutation({ mutationFn: (uId: string) => apiClient.disableUser(tId, uId), onSuccess: () => qc.invalidateQueries({ queryKey: queryKeys.users(tId) }) });
 };
 
-export const useResetUserPasswordMutation = (tenantId: string) => useMutation({
-  mutationFn: (userId: string) => apiClient.resetUserPassword(tenantId, userId)
+export const useResetUserPasswordMutation = (tId: string) => useMutation({
+  mutationFn: (userId: string) => apiClient.resetUserPassword(tId, userId)
 });
 
-export const useUpdateRoleMutation = (tenantId: string) => {
-  const queryClient = useQueryClient();
-  return useMutation({
-    mutationFn: ({ roleId, ...payload }: { roleId: string; description?: string; permissionKeys: string[] }) => apiClient.updateRole(tenantId, roleId, payload),
-    onSuccess: () => queryClient.invalidateQueries({ queryKey: queryKeys.roles(tenantId) })
-  });
+export const useUpdateRoleMutation = (tId: string) => {
+  const qc = useQueryClient();
+  return useMutation({ mutationFn: (v: { roleId: string, description?: string, permissionKeys: string[] }) => apiClient.updateRole(tId, v.roleId, v), onSuccess: () => qc.invalidateQueries({ queryKey: queryKeys.roles(tId) }) });
 };
 
 export const useUpdateFeatureFlagMutation = () => {
-  const queryClient = useQueryClient();
-  return useMutation({
-    mutationFn: ({ key, payload }: { key: string; payload: Partial<FeatureFlag> }) => apiClient.updateFeatureFlag(key, payload),
-    onSuccess: () => queryClient.invalidateQueries({ queryKey: queryKeys.features })
-  });
+  const qc = useQueryClient();
+  return useMutation({ mutationFn: (v: { key: string, payload: any }) => apiClient.updateFeatureFlag(v.key, v.payload), onSuccess: () => qc.invalidateQueries({ queryKey: queryKeys.features }) });
 };

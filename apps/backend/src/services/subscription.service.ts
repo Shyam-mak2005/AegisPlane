@@ -23,7 +23,7 @@ export class SubscriptionService {
     });
 
     if (actorId) {
-      await auditService.enqueue({
+      await auditService.log({
         tenantId,
         actorId,
         action: 'subscription.upsert',

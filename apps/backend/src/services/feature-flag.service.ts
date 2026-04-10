@@ -8,7 +8,7 @@ export class FeatureFlagService {
 
   async update(key: string, payload: { description?: string; enabledByDefault?: boolean; rolloutPercentage?: number; plansEnabled?: string[]; tenantOverrides?: Array<{ tenantId: string; enabled: boolean }> }, actorId?: string) {
     const flag = await featureFlagRepository.update(key, payload);
-    await auditService.enqueue({
+    await auditService.log({
       actorId,
       tenantId: undefined,
       action: 'featureFlag.update',

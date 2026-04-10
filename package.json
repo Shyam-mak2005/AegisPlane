@@ -8,9 +8,8 @@
   ],
   "scripts": {
     "start": "npm run start --workspace @aegisplane/backend",
-    "dev": "concurrently \"npm run dev --workspace @aegisplane/backend\" \"npm run dev:worker --workspace @aegisplane/backend\" \"npm run dev --workspace @aegisplane/web\"",
+    "dev": "concurrently \"npm run dev --workspace @aegisplane/backend\" \"npm run dev --workspace @aegisplane/web\"",
     "dev:backend": "npm run dev --workspace @aegisplane/backend",
-    "dev:worker": "npm run dev:worker --workspace @aegisplane/backend",
     "dev:web": "npm run dev --workspace @aegisplane/web",
     "build": "npm run build --workspace @aegisplane/backend && npm run build --workspace @aegisplane/web",
     "lint": "npm run lint --workspace @aegisplane/backend && npm run lint --workspace @aegisplane/web"

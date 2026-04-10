@@ -75,7 +75,7 @@ export class TenantService {
       await subscriptionService.upsertForTenant(String(tenant._id), payload.plan);
       await TenantModel.findByIdAndUpdate(tenant._id, { activeUserCount: 1 });
 
-      await auditService.enqueue({
+      await auditService.log({
         tenantId: String(tenant._id),
         actorId,
         action: 'tenant.create',
@@ -106,7 +106,7 @@ export class TenantService {
       throw new ApiError(404, 'TENANT_NOT_FOUND', 'Tenant was not found');
     }
 
-    await auditService.enqueue({
+    await auditService.log({
       tenantId,
       actorId,
       action: 'tenant.suspend',
@@ -124,7 +124,7 @@ export class TenantService {
     }
 
     await subscriptionService.upsertForTenant(tenantId, plan);
-    await auditService.enqueue({
+    await auditService.log({
       tenantId,
       actorId,
       action: 'tenant.plan.update',

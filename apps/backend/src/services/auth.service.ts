@@ -121,7 +121,7 @@ export class AuthService {
       userAgent: request.header('user-agent')
     });
 
-    await auditService.enqueue({
+    await auditService.log({
       tenantId: user.tenantId ? String(user.tenantId) : undefined,
       actorId: String(user._id),
       action: 'auth.login',

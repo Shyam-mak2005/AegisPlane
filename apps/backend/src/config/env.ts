@@ -10,10 +10,7 @@ export const env = {
   // === DATABASE ===
   MONGO_URI: process.env.MONGO_URI || 'mongodb://localhost:27017/aegisplane',
 
-  // === CACHE & QUEUE ===
-  // In Render dashboard, set this to your Internal Redis URL
-  REDIS_URL: process.env.REDIS_URL || 'redis://localhost:6379',
-
+  
   // === FRONTEND CONFIG ===
   // This must match your Vercel URL exactly (no trailing slash)
   APP_ORIGIN: process.env.APP_ORIGIN || 'http://localhost:5173',
@@ -35,9 +32,8 @@ export const env = {
   PLATFORM_ADMIN_EMAIL: process.env.PLATFORM_ADMIN_EMAIL || 'admin@aegisplane.dev',
   PLATFORM_ADMIN_PASSWORD: process.env.PLATFORM_ADMIN_PASSWORD || 'ChangeMeNow123!',
 
-  // === LOGGING & QUEUE ===
+  // === LOGGING ===
   LOG_LEVEL: process.env.LOG_LEVEL || 'info',
-  QUEUE_PREFIX: 'aegisplane',
 
   // === SMTP ===
   SMTP_FROM: process.env.SMTP_FROM || 'noreply@aegisplane.dev',

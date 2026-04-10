@@ -16,7 +16,7 @@ export class RoleService {
       scope: 'tenant'
     });
 
-    await auditService.enqueue({
+    await auditService.log({
       tenantId,
       actorId,
       action: 'role.create',
@@ -34,7 +34,7 @@ export class RoleService {
       throw new ApiError(404, 'ROLE_NOT_FOUND', 'Role was not found in this tenant');
     }
 
-    await auditService.enqueue({
+    await auditService.log({
       tenantId,
       actorId,
       action: 'role.update',

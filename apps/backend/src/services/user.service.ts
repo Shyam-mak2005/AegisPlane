@@ -56,7 +56,7 @@ export class UserService {
     const activeUserCount = await userRepository.countActiveByTenant(tenantId);
     await TenantModel.findByIdAndUpdate(tenantId, { activeUserCount });
 
-    await auditService.enqueue({
+    await auditService.log({
       tenantId,
       actorId,
       action: 'user.create',
@@ -79,7 +79,7 @@ export class UserService {
       throw new ApiError(404, 'USER_NOT_FOUND', 'User was not found in this tenant');
     }
 
-    await auditService.enqueue({
+    await auditService.log({
       tenantId,
       actorId,
       action: 'user.role.update',
@@ -101,7 +101,7 @@ export class UserService {
 
     const activeUserCount = await userRepository.countActiveByTenant(tenantId);
     await TenantModel.findByIdAndUpdate(tenantId, { activeUserCount });
-    await auditService.enqueue({
+    await auditService.log({
       tenantId,
       actorId,
       action: 'user.disable',
@@ -120,7 +120,7 @@ export class UserService {
       throw new ApiError(404, 'USER_NOT_FOUND', 'User was not found in this tenant');
     }
 
-    await auditService.enqueue({
+    await auditService.log({
       tenantId,
       actorId,
       action: 'user.password.reset',

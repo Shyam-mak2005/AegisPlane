@@ -20,39 +20,34 @@ export const createApp = () => {
   app.use(requestContext);
   app.use(pinoHttp({ logger }));
   app.use(helmet());
-  // Production-ready CORS configuration
-const corsOptions = {
-  origin: (origin: string | undefined, callback: (err: Error | null, allow?: boolean) => void) => {
-    // Allow requests with no origin (mobile apps, Postman, etc.)
-    if (!origin) return callback(null, true);
-    
-    // In production, check against allowed origins
-    const allowedOrigins = [
-      env.APP_ORIGIN,
-      'https://aegis-plane-web.vercel.app/login',
-      // Add other Vercel deployments as needed
-      'https://aegis-plane-kfiomqetk-shyam-mak2005s-projects.vercel.app',
-      'https://aegis-plane-h50x3pzaf-shyam-mak2005s-projects.vercel.app',
-      // Add localhost for development
-      'http://localhost:5173',
-      'http://localhost:3000',
-      'https://localhost:5173',
-      'https://localhost:3000'
-    ];
-    
-    if (allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'X-Tenant-ID'],
-  exposedHeaders: ['Set-Cookie']
-};
 
-app.use(cors(corsOptions));
+  // Production-ready CORS configuration
+  const corsOptions = {
+    origin: (origin: string | undefined, callback: (err: Error | null, allow?: boolean) => void) => {
+
+      // Allow requests with no origin (Postman, mobile apps)
+      if (!origin) return callback(null, true);
+
+      if (
+        origin === env.APP_ORIGIN ||           // production domain
+        origin.endsWith("vercel.app") ||       // all Vercel preview deployments
+        origin.includes("localhost")           // local development
+      ) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-Tenant-ID'],
+    exposedHeaders: ['Set-Cookie']
+  };
+
+  app.use(cors(corsOptions));
+  app.options('*', cors(corsOptions)); // handle preflight requests
+
   app.use(express.json({ limit: '1mb' }));
   app.use(express.urlencoded({ extended: true }));
   app.use(cookieParser());

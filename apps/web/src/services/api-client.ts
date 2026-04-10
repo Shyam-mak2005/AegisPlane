@@ -14,7 +14,7 @@ export class ApiClientError extends Error {
   }
 }
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || '';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL as string;
 const API_PREFIX = `${API_BASE_URL}/api/v1`;
 const getDefaultRoute = (permissions: string[], isPlatformAdmin: boolean) => {
   if (isPlatformAdmin || permissions.includes('system:read')) return '/dashboard';

@@ -13,7 +13,7 @@ export const env = {
   
   // === FRONTEND CONFIG ===
   // This must match your Vercel URL exactly (no trailing slash)
-  APP_ORIGIN: process.env.APP_ORIGIN || 'https://aegis-plane-kfiomqetk-shyam-mak2005s-projects.vercel.app',
+  APP_ORIGIN: process.env.APP_ORIGIN || 'https://aegis-plane-h50x3pzaf-shyam-mak2005s-projects.vercel.app',
   API_PREFIX: process.env.API_PREFIX || '/api/v1',
 
   // === SECURITY ===

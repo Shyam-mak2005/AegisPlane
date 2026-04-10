@@ -20,10 +20,38 @@ export const createApp = () => {
   app.use(requestContext);
   app.use(pinoHttp({ logger }));
   app.use(helmet());
-  app.use(cors({
-    origin: env.APP_ORIGIN,
-    credentials: true
-  }));
+  // Production-ready CORS configuration
+const corsOptions = {
+  origin: (origin: string | undefined, callback: (err: Error | null, allow?: boolean) => void) => {
+    // Allow requests with no origin (mobile apps, Postman, etc.)
+    if (!origin) return callback(null, true);
+    
+    // In production, check against allowed origins
+    const allowedOrigins = [
+      env.APP_ORIGIN,
+      // Add other Vercel deployments as needed
+      'https://aegis-plane-kfiomqetk-shyam-mak2005s-projects.vercel.app',
+      'https://aegis-plane-h50x3pzaf-shyam-mak2005s-projects.vercel.app',
+      // Add localhost for development
+      'http://localhost:5173',
+      'http://localhost:3000',
+      'https://localhost:5173',
+      'https://localhost:3000'
+    ];
+    
+    if (allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Tenant-ID'],
+  exposedHeaders: ['Set-Cookie']
+};
+
+app.use(cors(corsOptions));
   app.use(express.json({ limit: '1mb' }));
   app.use(express.urlencoded({ extended: true }));
   app.use(cookieParser());

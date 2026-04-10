@@ -29,6 +29,7 @@ const corsOptions = {
     // In production, check against allowed origins
     const allowedOrigins = [
       env.APP_ORIGIN,
+      'https://aegis-plane-web.vercel.app/login',
       // Add other Vercel deployments as needed
       'https://aegis-plane-kfiomqetk-shyam-mak2005s-projects.vercel.app',
       'https://aegis-plane-h50x3pzaf-shyam-mak2005s-projects.vercel.app',
